@@ -23,7 +23,6 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-
         pkgs-stable = import nixpkgs-stable { inherit system; config.allowUnfree = true; };
       in
       {
@@ -42,12 +41,12 @@
 
         devShells.default = pkgs.mkShell {
           buildInputs = [ 
-	    # neovim
-	    pkgs.neovim 
-	    pkgs.fzf
+            # neovim
+            pkgs.neovim 
+            pkgs.fzf
 
-	    # vscode
-	    pkgs.vscode
+            # vscode
+            pkgs.vscode
 
             # dotnet
             self.packages.${system}.dotnetSdks
@@ -59,21 +58,21 @@
             pkgs-stable.powershell
             bicep.packages.${system}.bicep-langserver
             azure-pipelines.packages.${system}.azure-pipelines-language-server
-	    pkgs.azure-artifacts-credprovider
 
-	    # git
-	    pkgs.lazygit
-	    pkgs.git-credential-manager
+            # git
+            pkgs.lazygit
+            pkgs.git-credential-manager
 
-	    # shell
-	    pkgs.fish
-	    pkgs.fd
-	    pkgs.ripgrep
-	    pkgs.zellij
-	    pkgs.eza
-	    pkgs.starship
-
-	    # javascript
+            # shell
+            pkgs.fish
+            pkgs.fd
+            pkgs.ripgrep
+            pkgs.zellij
+            pkgs.eza
+            pkgs.starship
+            pkgs.yazi
+        
+            # javascript
             pkgs.nodePackages.npm
             pkgs.nodePackages.nodejs
 
@@ -97,13 +96,13 @@
 
               export EDITOR=nvim
 
-	      export GCM_CREDENTIAL_STORE=secretservice
-	      git config --global credential.helper "${pkgs.git-credential-manager}/bin/git-credential-manager"
+              export GCM_CREDENTIAL_STORE=secretservice
+              git config --global credential.helper "${pkgs.git-credential-manager}/bin/git-credential-manager"
 
-	      # Azure DevOps fix
-	      git config --global credential.useHttpPath true
+              # Azure DevOps fix
+              git config --global credential.useHttpPath true
 
-	      zellij
+              zellij
             '';
         };
       }

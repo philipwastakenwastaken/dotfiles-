@@ -44,6 +44,7 @@
             # neovim
             pkgs.neovim 
             pkgs.fzf
+            pkgs.lua-language-server
 
             # vscode
             pkgs.vscode

@@ -1,28 +1,23 @@
 return {
-  -- Mason
-{
-  "williamboman/mason.nvim",
-  config = function()
-    require("mason").setup()
-  end,
-},
-
-  -- Mason LSP bridge
-  {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim" },
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" },
-      })
-    end,
-  },
-
-  -- LSP Config
+  -- nvim-lspconfig with Mason dependencies
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "williamboman/mason-lspconfig.nvim",
+      {
+        "williamboman/mason.nvim",
+        config = function()
+          require("mason").setup()
+        end,
+      },
+      {
+        "williamboman/mason-lspconfig.nvim",
+        config = function()
+          require("mason-lspconfig").setup({
+            ensure_installed = { "lua_ls" },
+            automatic_installation = true,
+          })
+        end,
+      },
       "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
@@ -46,7 +41,7 @@ return {
     end,
   },
 
-  -- Completion engine
+  -- Completion engine and related plugins
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -60,7 +55,6 @@ return {
     config = function()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-
       require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({

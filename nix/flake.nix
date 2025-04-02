@@ -7,6 +7,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     neovim.url = "github:nix-community/neovim-nightly-overlay";
 
+    csharp-language-server.url = "github:sofusa/csharp-language-server";
     bicep.url = "github:sofusa/bicep-language-server-nix";
     azure-pipelines.url = "github:sofusa/azure-pipelines-language-server-nix";
   };
@@ -17,6 +18,7 @@
     nixpkgs-stable,
     flake-utils,
     bicep,
+    csharp-language-server,
     azure-pipelines,
     neovim
   }:
@@ -45,6 +47,9 @@
             pkgs.neovim 
             pkgs.fzf
             pkgs.lua-language-server
+            pkgs.vscode-langservers-extracted
+            csharp-language-server.packages.${system}.csharp-language-server
+            pkgs.nodePackages.prettier
 
             # vscode
             pkgs.vscode

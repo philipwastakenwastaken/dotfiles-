@@ -91,6 +91,10 @@
 
             # Playwright
             pkgs.playwright-driver.browsers
+
+            # Niri
+            pkgs.xwayland-satellite
+            pkgs.waybar-mpris
 	  ];
 
           shellHook =

@@ -3,6 +3,7 @@ local modules = {
   "plugins.lsp",
   "plugins.telescope",
   "plugins.ui",
+  "plugins.treesitter",
 }
 
 local plugins = {}

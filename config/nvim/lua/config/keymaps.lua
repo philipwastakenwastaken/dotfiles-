@@ -8,6 +8,9 @@ vim.keymap.set(
 	{ noremap = true, silent = true, desc = "Show floating diagnostics window" }
 )
 
+vim.keymap.set("n", "<S-left>", "<cmd>bprev<CR>")
+vim.keymap.set("n", "<S-right>", "<cmd>bnext<CR>")
+
 vim.keymap.set("n", "]d", function()
 	vim.diagnostic.jump({
 		count = 1, -- move forward by one diagnostic

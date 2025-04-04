@@ -49,6 +49,7 @@
             pkgs.neovim 
             pkgs.fzf
             pkgs.lua-language-server
+            pkgs.stylua
             pkgs.vscode-langservers-extracted
             csharp-language-server.packages.${system}.csharp-language-server
             pkgs.nodePackages.prettier

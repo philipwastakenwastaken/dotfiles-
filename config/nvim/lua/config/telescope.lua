@@ -21,6 +21,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find f
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Telescope string grep" })
 vim.keymap.set("n", "<leader>fj", builtin.jumplist, { desc = "Telescope jump list" })
+vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope diagnostics" })
 
 vim.keymap.set("n", "<leader>fb", function()
 	builtin.buffers({

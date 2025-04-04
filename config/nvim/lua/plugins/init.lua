@@ -1,6 +1,7 @@
 -- Define the modules that hold our plugin specs.
 local modules = {
   "plugins.lsp",
+  "plugins.blinkcmp",
   "plugins.telescope",
   "plugins.ui",
   "plugins.treesitter",

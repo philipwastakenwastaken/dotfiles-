@@ -7,4 +7,3 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.clipboard = "unnamedplus"
 opt.wrap = false
-

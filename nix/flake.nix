@@ -6,6 +6,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     flake-utils.url = "github:numtide/flake-utils";
     neovim.url = "github:nix-community/neovim-nightly-overlay";
+    fenix.url = "github:nix-community/fenix";
 
     csharp-language-server.url = "github:sofusa/csharp-language-server";
     bicep.url = "github:sofusa/bicep-language-server-nix";
@@ -17,6 +18,7 @@
     nixpkgs,
     nixpkgs-stable,
     flake-utils,
+    fenix,
     bicep,
     csharp-language-server,
     azure-pipelines,
@@ -77,6 +79,18 @@
             pkgs.eza
             pkgs.starship
             pkgs.yazi
+
+            # rust
+            (fenix.packages.${system}.complete.withComponents [
+              "cargo"
+              "clippy"
+              "rust-src"
+              "rustc"
+              "rustfmt"
+            ])
+            fenix.packages.${system}.rust-analyzer
+            pkgs.openssl
+
         
             # javascript
             pkgs.nodePackages.npm

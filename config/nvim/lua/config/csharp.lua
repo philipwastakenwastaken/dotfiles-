@@ -1,4 +1,4 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "cs",

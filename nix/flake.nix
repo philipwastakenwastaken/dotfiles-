@@ -124,9 +124,6 @@
               export GCM_CREDENTIAL_STORE=secretservice
               git config --global credential.helper "${pkgs.git-credential-manager}/bin/git-credential-manager"
 
-              # Azure DevOps fix
-              git config --global credential.useHttpPath true
-
               zellij
             '';
         };

@@ -1,0 +1,9 @@
+[credential]
+  useHttpPath = true
+
+[user]
+  name = Philip Tofte Nielsen
+  email = pni@cvation.com
+
+[includeIf "gitdir:~/dev/SimCorp/**"]
+  path = ~/dotfiles/git/simcorp.gitconfig

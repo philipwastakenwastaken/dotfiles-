@@ -8,3 +8,4 @@ opt.expandtab = true
 opt.clipboard = "unnamedplus"
 opt.wrap = false
 opt.signcolumn = "yes"
+opt.splitright = true

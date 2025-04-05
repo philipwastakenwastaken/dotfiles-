@@ -6,6 +6,7 @@ local modules = {
 	"plugins.ui",
 	"plugins.treesitter",
 	"plugins.conform",
+	"plugins.sleuth",
 }
 
 local plugins = {}

@@ -71,6 +71,7 @@
             # git
             pkgs.lazygit
             pkgs.git-credential-manager
+            pkgs.gh
 
             # shell
             pkgs.fish

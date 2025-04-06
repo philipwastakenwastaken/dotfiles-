@@ -100,6 +100,9 @@
             # vscode
             pkgs.vscode
 
+            # rider
+            pkgs.jetbrains.rider
+
             # Chrome
             pkgs.google-chrome
             pkgs.chromedriver

@@ -35,6 +35,30 @@ input {
     }
 }
 
+// Main
+output "DP-3" {
+    mode "2560x1440@74.780"
+    position x=0 y=0      
+    scale 1
+    transform "normal"
+}
+
+// Left
+output "DP-4" {
+    mode "2560x1440@74.780"
+    position x=-2560 y=0      
+    scale 1
+    transform "normal"
+}
+
+// Right
+output "eDP-1" {
+    mode "2560x1600@165.004"
+    position x=2560 y=0    
+    scale 1.5
+    transform "normal"
+}
+
 layout {
     shadow {
         on
@@ -58,10 +82,21 @@ layout {
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-workspace "browser"
-workspace "code"
-workspace "music"
-workspace "communication"
+workspace "browser" {
+    open-on-output "DP-3"
+}
+
+workspace "code" {
+    open-on-output "DP-3"
+}
+
+workspace "music" {
+    open-on-output "DP-3"
+}
+
+workspace "communication" {
+    open-on-output "DP-3"
+}
 
 binds {
     Mod+T { spawn "ghostty" "-e" "nix" "develop" "~/dotfiles/nix"; }

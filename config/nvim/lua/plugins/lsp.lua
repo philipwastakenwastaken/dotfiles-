@@ -39,6 +39,25 @@ return {
 					},
 				},
 			})
+
+			-- Explicit configuration for jsonls
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+				filetypes = { "json", "jsonc" },
+				settings = {
+					json = {
+						-- Define custom schemas. For example, use the package.json schema for package.json files:
+						schemas = {
+							{
+								fileMatch = { "package.json" },
+								url = "https://json.schemastore.org/package.json",
+							},
+							-- Add additional schemas here if needed.
+						},
+						validate = { enable = true },
+					},
+				},
+			})
 		end,
 	},
 }

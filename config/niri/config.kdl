@@ -8,6 +8,10 @@ hotkey-overlay {
     skip-at-startup
 }
 
+cursor {
+    hide-after-inactive-ms 3000
+}
+
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true

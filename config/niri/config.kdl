@@ -36,7 +36,7 @@ input {
 }
 
 // Main
-output "DP-3" {
+output "DP-2" {
     mode "2560x1440@74.780"
     position x=0 y=0      
     scale 1
@@ -83,19 +83,19 @@ layout {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 workspace "browser" {
-    open-on-output "DP-3"
+    open-on-output "DP-2"
 }
 
 workspace "code" {
-    open-on-output "DP-3"
+    open-on-output "DP-2"
 }
 
 workspace "music" {
-    open-on-output "DP-3"
+    open-on-output "DP-2"
 }
 
 workspace "communication" {
-    open-on-output "DP-3"
+    open-on-output "DP-2"
 }
 
 binds {

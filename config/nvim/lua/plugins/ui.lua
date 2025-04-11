@@ -38,5 +38,11 @@ return {
 		end,
 	},
 	{ "nvim-tree/nvim-web-devicons", opts = {} },
-	{ "echasnovski/mini.icons", version = "*" },
+	{
+		"echasnovski/mini.icons",
+		version = "*",
+		config = function()
+			require("mini.icons").setup()
+		end,
+	},
 }

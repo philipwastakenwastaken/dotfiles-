@@ -7,6 +7,7 @@ local modules = {
 	"plugins.treesitter",
 	"plugins.conform",
 	"plugins.sleuth",
+	"plugins.yazi",
 	"plugins.dashboard",
 }
 

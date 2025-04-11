@@ -26,3 +26,5 @@ vim.keymap.set("n", "[d", function()
 		float = true, -- open a floating window after jumping
 	})
 end, { noremap = true, silent = true, desc = "Jump to previous diagnostic" })
+
+vim.keymap.set("n", "<leader>y", "<cmd>Yazi<CR>", { desc = "Yazi" })

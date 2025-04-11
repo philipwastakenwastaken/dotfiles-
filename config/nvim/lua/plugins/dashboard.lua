@@ -8,6 +8,12 @@ local logo = [[
 ]]
 logo = string.rep("\n", 8) .. logo .. "\n\n"
 
+local footer = function()
+	local stats = require("lazy").stats()
+	local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+	return { "⚡ Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+end
+
 return {
 	{
 		"nvimdev/dashboard-nvim",
@@ -51,9 +57,7 @@ return {
 						key = "q",
 					},
 				},
-				footer = {
-					"Have a great day!",
-				},
+				footer = footer,
 			}
 
 			-- Modify each center button: Append spaces until the description is 43 characters long

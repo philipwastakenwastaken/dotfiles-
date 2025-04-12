@@ -39,7 +39,7 @@ return {
 					{
 						action = "Telescope oldfiles",
 						desc = " Recently opened files",
-						icon = " ",
+						icon = " ",
 						key = "o",
 					},
 					{

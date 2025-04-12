@@ -23,6 +23,11 @@ vim.keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Telescope strin
 vim.keymap.set("n", "<leader>fj", builtin.jumplist, { desc = "Telescope jump list" })
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope diagnostics" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader>fc", function()
+	builtin.find_files({
+		cwd = vim.fn.stdpath("config"),
+	})
+end, { desc = "Telescope nvim config" })
 
 vim.keymap.set("n", "<leader>fb", function()
 	builtin.buffers({

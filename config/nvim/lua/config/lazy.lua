@@ -14,4 +14,5 @@ require("lazy").setup(require("plugins"))
 
 -- Load configs that need to be run after plugins
 require("config.telescope")
+require("config.lazygit")
 require("config.conform")

@@ -8,6 +8,7 @@ local modules = {
 	"plugins.conform",
 	"plugins.sleuth",
 	"plugins.yazi",
+	"plugins.lazygit",
 	"plugins.dashboard",
 }
 

@@ -8,7 +8,7 @@ return {
 		build = "cargo build --release",
 		opts = {
 			-- Choose a preset for key mappings: 'default', 'super-tab', 'enter', or 'none'
-			keymap = { preset = "enter" },
+			keymap = { preset = "default" },
 			appearance = {
 				nerd_font_variant = "mono", -- Adjust based on your preferred Nerd Font variant
 			},

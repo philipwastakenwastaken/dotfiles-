@@ -43,6 +43,12 @@ return {
 						key = "o",
 					},
 					{
+						action = 'lua require("persistence").load()',
+						desc = " Restore session",
+						icon = " ",
+						key = "r",
+					},
+					{
 						action = "Lazy",
 						desc = " Lazy",
 						icon = "󰒲 ",

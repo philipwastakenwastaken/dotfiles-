@@ -22,6 +22,7 @@ return {
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
+			local util = require("lspconfig.util")
 			-- Use blink.cmp to get the enhanced LSP capabilities
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 
@@ -86,6 +87,33 @@ return {
 							-- Add additional schemas here if needed.
 						},
 						validate = { enable = true },
+					},
+				},
+			})
+
+			local function find_pipelines_root(fname)
+				local base = util.root_pattern("pipelines")(fname)
+				if base then
+					return util.path.join(base, "pipelines")
+				end
+				return nil
+			end
+
+			lspconfig.azure_pipelines_ls.setup({
+				root_dir = find_pipelines_root,
+				capabilities = capabilities,
+				settings = {
+					yaml = {
+						schemas = {
+							["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+								"/azure-pipeline*.y*l",
+								"/*.azure*",
+								"Azure-Pipelines/**/*.y*l",
+								"Pipelines/*.y*l",
+								"pipelines/*.y*l",
+								"pipelines/**/*.y*l",
+							},
+						},
 					},
 				},
 			})

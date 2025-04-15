@@ -14,7 +14,7 @@ return {
 				"williamboman/mason-lspconfig.nvim",
 				config = function()
 					require("mason-lspconfig").setup({
-						ensure_installed = { "lua_ls", "jsonls" },
+						ensure_installed = { "lua_ls", "jsonls", "bicep", "azure_pipelines_ls" },
 						automatic_installation = true,
 					})
 				end,
@@ -38,6 +38,14 @@ return {
 						telemetry = { enable = false },
 					},
 				},
+			})
+
+			local root_candidates = vim.fs.find({ ".sln", ".csproj" }, { upward = true })
+			local root_dir = root_candidates[1] and vim.fs.dirname(root_candidates[1]) or vim.loop.cwd()
+			lspconfig.bicep.setup({
+				cmd = { "bicep-langserver" },
+				capabilities = capabilities,
+				root_dir = root_dir,
 			})
 
 			-- Explicit configuration for jsonls

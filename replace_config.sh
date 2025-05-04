@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
 
-DOTFILES="$HOME/dotfiles-"
+DOTFILES="$HOME/dotfiles"
 CFGROOT="$DOTFILES/config"     # e.g. .../dotfiles/config/nvim
 DEST="$HOME/.config"           # where the links should live (respects XDG)
 

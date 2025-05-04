@@ -1,9 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -eu -o pipefail
 
-# Remove only top-level directories (e.g., nvim) from home, excluding 'git'
-fd -t d "" config -d 1 --exclude git -x rm -rf ~/."{}"
+DOTFILES="$HOME/dotfiles-"
+CFGROOT="$DOTFILES/config"     # e.g. .../dotfiles/config/nvim
+DEST="$HOME/.config"           # where the links should live (respects XDG)
 
-# Create symlinks for these top-level directories, excluding 'git'
-fd -t d "" config -d 1 --exclude git -x ln -s $HOME/dotfiles/"{}" $HOME/."{}"
+mkdir -p "$DEST"               # 1. ensure ~/.config exists
 
-cp $HOME/dotfiles/config/git/.gitconfig $HOME/.gitconfig
+# 2. remove stale links or dirs (except git)
+fd -t d "" "$CFGROOT" -d 1 --exclude git \
+   -x rm -rf "$DEST/{/}"
+
+# 3. recreate links
+fd -t d "" "$CFGROOT" -d 1 --exclude git \
+   -x ln -s "{}" "$DEST/{/}"
+
+# standalone git config still belongs in $HOME itself
+cp "$CFGROOT/git/.gitconfig" "$HOME/.gitconfig"

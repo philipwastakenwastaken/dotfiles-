@@ -91,6 +91,21 @@ return {
 				},
 			})
 
+			-- absolute path of the wrapper placed in the Nix store
+			local pes_exe = vim.fn.exepath("powershell-editor-services") -- e.g. /nix/store/…/bin/powershell-editor-services
+			local pes_root = vim.fn.fnamemodify(pes_exe, ":h:h") .. "/lib/powershell-editor-services"
+
+			lspconfig.powershell_es.setup({
+				-- (optional) tell lspconfig where the bundle lives; not strictly required
+				bundle_path = pes_root,
+
+				-- filetypes you want the server on
+				filetypes = { "ps1", "psm1", "psd1" },
+
+				-- start only inside a Git repo or when that settings file exists
+				root_dir = util.root_pattern("PSScriptAnalyzerSettings.psd1", ".git"),
+			})
+
 			local function find_pipelines_root(fname)
 				local base = util.root_pattern("pipelines")(fname)
 				if base then

@@ -55,6 +55,7 @@
                 pkgs.vscode-langservers-extracted
                 csharp-language-server.packages.${system}.csharp-language-server
                 pkgs.nodePackages.prettier
+                pkgs.powershell-editor-services
 
                 # vscode
                 pkgs.vscode

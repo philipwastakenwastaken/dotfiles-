@@ -66,8 +66,8 @@
                 pkgs.azure-functions-core-tools
 
                 # azure
-                pkgs-stable.azure-cli
-                pkgs-stable.powershell
+                pkgs.azure-cli
+                pkgs.powershell
                 bicep.packages.${system}.bicep-langserver
                 azure-pipelines.packages.${system}.azure-pipelines-language-server
 

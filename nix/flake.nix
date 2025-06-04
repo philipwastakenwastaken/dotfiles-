@@ -100,6 +100,8 @@
 
                 # python
                 pkgs.uv
+                pkgs.pyright
+                pkgs.ruff
 
                 # javascript
                 pkgs.nodePackages.npm

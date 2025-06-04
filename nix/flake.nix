@@ -98,6 +98,9 @@
                 fenix.packages.${system}.rust-analyzer
                 pkgs.openssl
 
+                # python
+                pkgs.uv
+
                 # javascript
                 pkgs.nodePackages.npm
                 pkgs.nodePackages.nodejs

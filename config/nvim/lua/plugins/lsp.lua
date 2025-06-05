@@ -14,7 +14,7 @@ return {
 				"williamboman/mason-lspconfig.nvim",
 				config = function()
 					require("mason-lspconfig").setup({
-						ensure_installed = { "lua_ls", "jsonls", "bicep", "azure_pipelines_ls" },
+						ensure_installed = { "lua_ls", "jsonls", "bicep", "azure_pipelines_ls", "pyright" },
 						automatic_installation = true,
 					})
 				end,
@@ -25,6 +25,12 @@ return {
 			local util = require("lspconfig.util")
 			-- Use blink.cmp to get the enhanced LSP capabilities
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
+
+			lspconfig.pyright.setup{}
+
+			lspconfig.ruff.setup{}
+
+			lspconfig.rust_analyzer.setup{}
 
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,

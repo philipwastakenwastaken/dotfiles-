@@ -72,6 +72,7 @@
                 bicep.packages.${system}.bicep-langserver
                 azure-pipelines.packages.${system}.azure-pipelines-language-server
                 pkgs.azurite
+                pkgs.azure-functions-core-tools
 
                 # git
 		pkgs.git

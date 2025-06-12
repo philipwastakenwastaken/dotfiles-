@@ -71,6 +71,7 @@
                 pkgs.azure-storage-azcopy
                 bicep.packages.${system}.bicep-langserver
                 azure-pipelines.packages.${system}.azure-pipelines-language-server
+                pkgs.azurite
 
                 # git
 		pkgs.git

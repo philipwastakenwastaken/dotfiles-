@@ -8,8 +8,7 @@
     neovim.url           = "github:nix-community/neovim-nightly-overlay";
     fenix.url            = "github:nix-community/fenix";
 
-    # Removed until flake support is readded
-    # csharp-language-server.url = "github:sofusa/csharp-language-server";
+    csharp-language-server.url = "github:sofusa/csharp-language-server";
     bicep.url                 = "github:sofusa/bicep-language-server-nix";
     azure-pipelines.url       = "github:sofusa/azure-pipelines-language-server-nix";
   };
@@ -21,6 +20,7 @@
     flake-utils,
     fenix,
     bicep,
+    csharp-language-server,
     azure-pipelines,
     neovim
   }:
@@ -53,7 +53,7 @@
                 pkgs.lua-language-server
                 pkgs.stylua
                 pkgs.vscode-langservers-extracted
-                # csharp-language-server.packages.${system}.csharp-language-server
+                csharp-language-server.packages.${system}.csharp-language-server
                 pkgs.nodePackages.prettier
                 pkgs.powershell-editor-services
 

@@ -80,6 +80,7 @@ layout {
         proportion 0.66667
     }
 
+    always-center-single-column
 
     gaps 16
 }
@@ -103,7 +104,7 @@ workspace "communication" {
 }
 
 binds {
-    Mod+T { spawn "ghostty" "-e" "nix" "develop" "~/dotfiles/nix"; }
+    Mod+T { spawn "ghostty" "-e" "nix" "develop" "/var/home/pni/dotfiles/nix"; }
     Mod+D { spawn "fuzzel"; }
     Mod+L { spawn "swaylock"; }
 

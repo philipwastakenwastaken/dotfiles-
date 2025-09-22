@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 prepend_keymap = [
   { on = [ "g", "i" ], run = "cd ~/dev/SimCorp/InsightsHub/", desc = "Goto ~/dev/SimCorp/InsightsHub" },
 ]

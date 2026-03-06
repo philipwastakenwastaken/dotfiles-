@@ -10,9 +10,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(require("plugins"))
-
--- Load configs that need to be run after plugins
-require("config.telescope")
-require("config.lazygit")
-require("config.conform")
+require("lazy").setup({ { import = "plugins" } })

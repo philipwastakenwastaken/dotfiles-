@@ -79,6 +79,7 @@
                 pkgs.gh
 
                 # shell
+                pkgs.bashInteractive
                 pkgs.fish
                 pkgs.fd
                 pkgs.ripgrep

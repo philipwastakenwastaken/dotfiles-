@@ -110,6 +110,7 @@ return {
 				"pyright",       -- defaults only
 				"ruff",          -- defaults only
 				"rust_analyzer", -- defaults only
+				"roslyn_ls",     -- defaults only
 				"lua_ls",
 				"bicep",
 				"jsonls",

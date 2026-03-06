@@ -1,9 +1,8 @@
 return {
-	-- nvim-lspconfig with Mason dependencies
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"saghen/blink.cmp", -- Replace nvim-cmp dependency with blink.cmp
+			"saghen/blink.cmp",
 			{
 				"williamboman/mason.nvim",
 				config = function()
@@ -21,11 +20,15 @@ return {
 			},
 		},
 		config = function()
-			local capabilities = require("blink.cmp").get_lsp_capabilities()
+			-- Apply blink.cmp capabilities to all servers
+			vim.lsp.config("*", {
+				capabilities = require("blink.cmp").get_lsp_capabilities(),
+			})
 
-			-- Apply capabilities globally to all servers
-			vim.lsp.config("*", { capabilities = capabilities })
+			-- Servers that need custom configuration
+			-- (servers not listed here use lspconfig defaults and just need vim.lsp.enable)
 
+			-- Inject Neovim runtime into lua_ls when no project .luarc.json is present
 			vim.lsp.config("lua_ls", {
 				on_init = function(client)
 					if client.workspace_folders then
@@ -37,7 +40,6 @@ return {
 							return
 						end
 					end
-
 					client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
 						runtime = { version = "LuaJIT" },
 						workspace = {
@@ -51,16 +53,15 @@ return {
 				},
 			})
 
+			-- Root at the nearest .sln/.csproj instead of lspconfig's default
 			vim.lsp.config("bicep", {
 				cmd = { "bicep-langserver" },
 				root_dir = function(bufnr, cb)
-					local root = vim.fs.root(bufnr, { ".sln", ".csproj" })
-					cb(root or vim.uv.cwd())
+					cb(vim.fs.root(bufnr, { ".sln", ".csproj" }) or vim.uv.cwd())
 				end,
 			})
 
 			vim.lsp.config("jsonls", {
-				filetypes = { "json", "jsonc" },
 				settings = {
 					json = {
 						schemas = {
@@ -74,17 +75,16 @@ return {
 				},
 			})
 
-			local pes_exe = vim.fn.exepath("powershell-editor-services")
-			local pes_root = vim.fn.fnamemodify(pes_exe, ":h:h") .. "/lib/powershell-editor-services"
-
+			-- bundle_path is resolved from the Nix-installed wrapper location
 			vim.lsp.config("powershell_es", {
-				bundle_path = pes_root,
-				filetypes = { "ps1", "psm1", "psd1" },
+				bundle_path = vim.fn.fnamemodify(vim.fn.exepath("powershell-editor-services"), ":h:h")
+					.. "/lib/powershell-editor-services",
 				root_dir = function(bufnr, cb)
 					cb(vim.fs.root(bufnr, { "PSScriptAnalyzerSettings.psd1", ".git" }))
 				end,
 			})
 
+			-- Root at the pipelines/ subdirectory so schema paths resolve correctly
 			vim.lsp.config("azure_pipelines_ls", {
 				root_dir = function(bufnr, cb)
 					local root = vim.fs.root(bufnr, { "pipelines" })
@@ -107,9 +107,9 @@ return {
 			})
 
 			vim.lsp.enable({
-				"pyright",
-				"ruff",
-				"rust_analyzer",
+				"pyright",       -- defaults only
+				"ruff",          -- defaults only
+				"rust_analyzer", -- defaults only
 				"lua_ls",
 				"bicep",
 				"jsonls",

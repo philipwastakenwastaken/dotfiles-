@@ -1,4 +1,5 @@
 set -U fish_greeting
+set --global fish_color_autosuggestion 555
 
 alias vim nvim
 set -gx EDITOR nvim

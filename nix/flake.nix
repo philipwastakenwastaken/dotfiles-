@@ -26,6 +26,16 @@
       let
         pkgs        = import nixpkgs        { inherit system; config.allowUnfree = true; };
         pkgs-stable = import nixpkgs-stable { inherit system; config.allowUnfree = true; };
+        rustToolchain = fenix.packages.${system}.complete.withComponents [
+          "cargo"
+          "clippy"
+          "rust-src"
+          "rustc"
+          "rustfmt"
+        ];
+        rustAnalyzer =
+          # Use the toolchain component instead of the cargo-built nightly package.
+          fenix.packages.${system}.complete.rust-analyzer;
       in
       {
         packages.dotnetSdks = pkgs.buildEnv {
@@ -68,7 +78,6 @@
                 bicep.packages.${system}.bicep-langserver
                 azure-pipelines.packages.${system}.azure-pipelines-language-server
                 pkgs.azurite
-                pkgs.azure-functions-core-tools
 
                 # git
 		pkgs.git
@@ -87,14 +96,8 @@
                 pkgs.yazi
 
                 # rust
-                (fenix.packages.${system}.complete.withComponents [
-                  "cargo"
-                  "clippy"
-                  "rust-src"
-                  "rustc"
-                  "rustfmt"
-                ])
-                fenix.packages.${system}.rust-analyzer
+                rustToolchain
+                rustAnalyzer
                 pkgs.openssl
 
                 # python
@@ -104,9 +107,6 @@
 
                 # javascript
                 pkgs.nodejs
-
-                # vscode
-                pkgs.vscode
 
                 # rider
                 pkgs.jetbrains.rider

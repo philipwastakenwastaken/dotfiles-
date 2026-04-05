@@ -33,8 +33,6 @@
           paths = [
             (with pkgs-stable.dotnetCorePackages;
               combinePackages [
-                dotnet_9.sdk
-                dotnet_9.aspnetcore
                 dotnet_8.sdk
                 dotnet_8.aspnetcore
               ])
@@ -52,7 +50,7 @@
                 pkgs.stylua
                 pkgs.vscode-langservers-extracted
                 pkgs.roslyn-ls
-                pkgs.nodePackages.prettier
+                pkgs.prettier
                 pkgs.powershell-editor-services
 
                 # vscode
@@ -105,8 +103,7 @@
                 pkgs.ruff
 
                 # javascript
-                pkgs.nodePackages.npm
-                pkgs.nodePackages.nodejs
+                pkgs.nodejs
 
                 # vscode
                 pkgs.vscode

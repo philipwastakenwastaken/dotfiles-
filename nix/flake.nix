@@ -7,6 +7,11 @@
     flake-utils.url      = "github:numtide/flake-utils";
     neovim.url           = "github:nix-community/neovim-nightly-overlay";
     fenix.url            = "github:nix-community/fenix";
+    lazytest = {
+      url = "github:philipwastakenwastaken/lazytest";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.fenix.follows = "fenix";
+    };
 
     bicep.url                 = "github:sofusa/bicep-language-server-nix";
     azure-pipelines.url       = "github:sofusa/azure-pipelines-language-server-nix";
@@ -18,6 +23,7 @@
     nixpkgs-stable,
     flake-utils,
     fenix,
+    lazytest,
     bicep,
     azure-pipelines,
     neovim
@@ -49,6 +55,8 @@
           ];
         };
 
+        packages.lazytest = lazytest.packages.${system}.default;
+
         devShells.default = pkgs.mkShell {
           buildInputs =
             let
@@ -68,6 +76,7 @@
 
                 # dotnet
                 self.packages.${system}.dotnetSdks
+                self.packages.${system}.lazytest
                 pkgs-stable.csharpier
                 pkgs.azure-functions-core-tools
 

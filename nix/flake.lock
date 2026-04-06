@@ -132,6 +132,29 @@
         "type": "github"
       }
     },
+    "lazytest": {
+      "inputs": {
+        "fenix": [
+          "fenix"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775402194,
+        "narHash": "sha256-XMLmAtHCyEa4P7Vgf+KhQEORrPcnWuheqWK6uh9N3YA=",
+        "owner": "philipwastakenwastaken",
+        "repo": "lazytest",
+        "rev": "a788e24308f18964f224ad70fcdd073871bb38dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "philipwastakenwastaken",
+        "repo": "lazytest",
+        "type": "github"
+      }
+    },
     "neovim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -270,6 +293,7 @@
         "bicep": "bicep",
         "fenix": "fenix",
         "flake-utils": "flake-utils_3",
+        "lazytest": "lazytest",
         "neovim": "neovim",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-stable": "nixpkgs-stable"

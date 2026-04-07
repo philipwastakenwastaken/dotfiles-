@@ -117,9 +117,6 @@
                 # javascript
                 pkgs.nodejs
 
-                # rider
-                pkgs.jetbrains.rider
-
                 # Chrome
                 pkgs.google-chrome
                 pkgs.chromedriver

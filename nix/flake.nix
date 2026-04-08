@@ -63,6 +63,7 @@
               common = [
                 # neovim
                 pkgs.neovim
+                pkgs.tree-sitter
                 pkgs.fzf
                 pkgs.lua-language-server
                 pkgs.stylua

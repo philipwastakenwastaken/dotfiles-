@@ -28,7 +28,19 @@
   }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs        = import nixpkgs        { inherit system; config.allowUnfree = true; };
+        dotnet10BinOverlay = final: prev: {
+          dotnetCorePackages = prev.dotnetCorePackages // {
+            sdk_10_0        = prev.dotnetCorePackages.sdk_10_0-bin;
+            aspnetcore_10_0 = prev.dotnetCorePackages.aspnetcore_10_0-bin;
+            runtime_10_0    = prev.dotnetCorePackages.runtime_10_0-bin;
+            dotnet_10       = prev.dotnetCorePackages.dotnet_10 // {
+              sdk        = prev.dotnetCorePackages.sdk_10_0-bin;
+              aspnetcore = prev.dotnetCorePackages.aspnetcore_10_0-bin;
+              runtime    = prev.dotnetCorePackages.runtime_10_0-bin;
+            };
+          };
+        };
+        pkgs        = import nixpkgs        { inherit system; config.allowUnfree = true; overlays = [ dotnet10BinOverlay ]; };
         pkgs-stable = import nixpkgs-stable { inherit system; config.allowUnfree = true; };
         rustToolchain = fenix.packages.${system}.complete.withComponents [
           "cargo"
@@ -70,8 +82,8 @@
           paths = [
             (with pkgs.dotnetCorePackages;
               combinePackages [
-                dotnet_10.sdk
-                dotnet_10.aspnetcore
+                sdk_10_0-bin
+                aspnetcore_10_0-bin
                 dotnet_9.sdk
                 dotnet_9.aspnetcore
                 dotnet_8.sdk

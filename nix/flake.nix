@@ -13,7 +13,6 @@
       inputs.fenix.follows = "fenix";
     };
 
-    bicep.url                 = "github:sofusa/bicep-language-server-nix";
     azure-pipelines.url       = "github:sofusa/azure-pipelines-language-server-nix";
   };
 
@@ -24,7 +23,6 @@
     flake-utils,
     fenix,
     lazytest,
-    bicep,
     azure-pipelines,
     neovim
   }:
@@ -42,13 +40,38 @@
         rustAnalyzer =
           # Use the toolchain component instead of the cargo-built nightly package.
           fenix.packages.${system}.complete.rust-analyzer;
+
+        bicep-langserver = pkgs.stdenv.mkDerivation rec {
+          pname = "bicep-langserver";
+          version = "0.42.1";
+
+          src = pkgs.fetchzip {
+            url = "https://github.com/Azure/bicep/releases/download/v${version}/bicep-langserver.zip";
+            sha256 = "1fmxjy25x9zh39z5983sm0bgssk1p7gljwprshjnr8lxqg5pam6k";
+            stripRoot = false;
+          };
+
+          installPhase = ''
+            mkdir -p $out/bin
+            cp -r $src $out/bin/Bicep.LangServer/
+
+            cat <<EOF > $out/bin/bicep-langserver
+            #!/usr/bin/env bash
+            exec dotnet $out/bin/Bicep.LangServer/Bicep.LangServer.dll "\$@"
+            EOF
+
+            chmod +x $out/bin/bicep-langserver
+          '';
+        };
       in
       {
         packages.dotnetSdks = pkgs.buildEnv {
           name  = "dotnetSdks";
           paths = [
-            (with pkgs-stable.dotnetCorePackages;
+            (with pkgs.dotnetCorePackages;
               combinePackages [
+                dotnet_10.sdk
+                dotnet_10.aspnetcore
                 dotnet_9.sdk
                 dotnet_9.aspnetcore
                 dotnet_8.sdk
@@ -87,7 +110,7 @@
                 pkgs.azure-cli
                 pkgs.powershell
                 pkgs.azure-storage-azcopy
-                bicep.packages.${system}.bicep-langserver
+                bicep-langserver
                 azure-pipelines.packages.${system}.azure-pipelines-language-server
                 pkgs.azurite
 
@@ -144,7 +167,7 @@
             export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
             export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true;
 
-            export DOTNET_ROOT="${pkgs-stable.dotnetCorePackages.dotnet_9.sdk}";
+            export DOTNET_ROOT="${pkgs.dotnetCorePackages.dotnet_9.sdk}";
 
             export EDITOR=nvim
 	    export SHELL=fish

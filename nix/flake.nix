@@ -83,11 +83,8 @@
             (with pkgs.dotnetCorePackages;
               combinePackages [
                 sdk_10_0-bin
-                aspnetcore_10_0-bin
                 dotnet_9.sdk
-                dotnet_9.aspnetcore
                 dotnet_8.sdk
-                dotnet_8.aspnetcore
               ])
           ];
         };
@@ -179,7 +176,9 @@
             export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
             export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true;
 
-            export DOTNET_ROOT="${pkgs.dotnetCorePackages.dotnet_9.sdk}";
+            export DOTNET_ROOT="${self.packages.${system}.dotnetSdks}/share/dotnet"
+            export DOTNET_ROOT_X64="$DOTNET_ROOT"
+            export PATH="$DOTNET_ROOT:$PATH"
 
             export EDITOR=nvim
 	    export SHELL=fish

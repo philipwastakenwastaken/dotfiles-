@@ -1,0 +1,8 @@
+# Mouse selection copies to the system clipboard (and primary).
+# Without this, selecting in Ghostty only hits PRIMARY and Ctrl+V /
+# Ctrl+Shift+V won't see the selection.
+copy-on-select = clipboard
+
+# Make Shift+Insert paste from the system clipboard (default pastes PRIMARY),
+# so Ctrl+V and Shift+Insert always produce the same thing.
+keybind = shift+insert=paste_from_clipboard

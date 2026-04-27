@@ -77,17 +77,29 @@
         };
       in
       {
-        packages.dotnetSdks = pkgs.buildEnv {
-          name  = "dotnetSdks";
-          paths = [
-            (with pkgs.dotnetCorePackages;
+        packages.dotnetSdks =
+          # combinePackages uses symlinkJoin, so the SDK directories (e.g.
+          # share/dotnet/sdk/10.0.202) are symlinks back to each per-SDK store.
+          # When MSBuild loads its task assembly, .NET resolves the path through
+          # those symlinks and computes the dotnet host from the resolved
+          # location — landing in the per-SDK store, which only contains its own
+          # runtime. That breaks `dotnet test` whenever a project targets a
+          # framework version different from the active SDK's. We dereference
+          # all symlinks here so every file lives in this single store path,
+          # alongside a shared/ tree containing all runtimes.
+          let
+            combined = with pkgs.dotnetCorePackages;
               combinePackages [
                 sdk_10_0-bin
                 dotnet_9.sdk
                 dotnet_8.sdk
-              ])
-          ];
-        };
+              ];
+          in
+          pkgs.runCommand "dotnetSdks" { } ''
+            mkdir -p $out
+            cp -RL ${combined}/. $out/
+            chmod -R u+w $out
+          '';
 
         packages.lazytest = lazytest.packages.${system}.default;
 

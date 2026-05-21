@@ -127,6 +127,8 @@
                 pkgs-stable.csharpier
                 pkgs.azure-functions-core-tools
 
+                pkgs.redis
+
                 # azure
                 pkgs.azure-cli
                 pkgs.powershell
@@ -185,6 +187,13 @@
               common ++ linuxOnly ++ darwinOnly;
 
           shellHook = ''
+            # Expose common shared libs so pip/uv-installed Python wheels
+            # (numpy, pandas, etc.) can find libstdc++ and friends at runtime.
+            export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [
+              pkgs.stdenv.cc.cc.lib
+              pkgs.zlib
+            ]}:$LD_LIBRARY_PATH"
+
             export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
             export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true;
 

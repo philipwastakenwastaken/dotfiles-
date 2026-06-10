@@ -13,7 +13,10 @@
       inputs.fenix.follows = "fenix";
     };
 
-    azure-pipelines.url       = "github:sofusa/azure-pipelines-language-server-nix";
+    azure-pipelines = {
+      url = "github:sofusa/azure-pipelines-language-server-nix";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
   };
 
   outputs = {
@@ -210,6 +213,8 @@
                 *)
                   # Linux (and everything else): keep Git‑Credential‑Manager
                   export GCM_CREDENTIAL_STORE=secretservice
+                  # Use device code flow instead of browser OAuth to avoid callback issues
+                  export GCM_MSAUTH_FLOW=devicecode
                   ;;
               esac
               git config --global credential.helper \

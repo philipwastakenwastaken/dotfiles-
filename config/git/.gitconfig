@@ -6,4 +6,4 @@
   email = pni@cvation.com
 
 [includeIf "gitdir:~/dev/SimCorp/**"]
-  path = ~/dotfiles/git/simcorp.gitconfig
+  path = ~/dotfiles/config/git/simcorp.gitconfig

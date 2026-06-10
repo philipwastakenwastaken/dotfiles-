@@ -1,0 +1,318 @@
+﻿Diagnose log at 2026-06-10T09:24:33Z
+
+AppPath: /nix/store/qj13v9wpp87gd5rivhah0mx8gdgdipkx-git-credential-manager-2.7.3/bin/git-credential-manager
+InstallDir: /nix/store/qj13v9wpp87gd5rivhah0mx8gdgdipkx-git-credential-manager-2.7.3/lib/git-credential-manager/
+Version: 2.7.3
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: Bluefin (Version: 42.20250727 / FROM Fedora Silverblue 42)
+Reading environment variables... OK
+ Variables:
+NIX_SSL_CERT_FILE=/nix/store/mg063aj0crwhchqayf2qbyf28k6mlrxm-nss-cacert-3.121/etc/ssl/certs/ca-bundle.crt
+SYSTEM_CERTIFICATE_PATH=/nix/store/mg063aj0crwhchqayf2qbyf28k6mlrxm-nss-cacert-3.121/etc/ssl/certs/ca-bundle.crt
+NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+SHELL=/usr/sbin/zsh
+NIX_BINTOOLS=/nix/store/x7ikkplbrv5dlihy1bqq32gp6lilkval-binutils-wrapper-2.44
+NIX_CC=/nix/store/hb2bs5fg5wkm04x565737qd5nh2hy5nk-gcc-wrapper-15.2.0
+PYTHONNOUSERSITE=1
+CLAUDE_CODE_SESSION_ID=200f482d-df69-4eb0-b16a-cc1080394451
+depsHostHostPropagated=
+_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__linux_x86_64-linux-gnu
+LOGNAME=pni
+nativeBuildInputs=
+configureFlags=
+preferLocalBuild=1
+DEBUGINFOD_URLS=https://debuginfod.fedoraproject.org/ 
+ZELLIJ=0
+NIX_GCROOT=/nix/store/djr2pch3kn5lp0h5fs4k7ffs66kqqwpj-nix-shell-env
+TEMPDIR=/tmp/nix-shell.z11nYI
+NIX_STORE=/nix/store
+NIX_LDFLAGS=-rpath /var/home/pni/outputs/out/lib  -L/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib -L/nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10/lib -L/nix/store/3lz2npxc62d7jzgpnzjb558gd5k2b358-stylua-2.4.1/lib -L/nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/lib -L/nix/store/w2x3fcl4jazqbdd9jv6nxfwa0sfygvck-rust-nightly-complete-with-components-2026-04-22/lib -L/nix/store/bga5xf95jaypy385hvxm4h3yxl3m1566-openssl-3.6.1/lib -L/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib -L/nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10/lib -L/nix/store/3lz2npxc62d7jzgpnzjb558gd5k2b358-stylua-2.4.1/lib -L/nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/lib -L/nix/store/w2x3fcl4jazqbdd9jv6nxfwa0sfygvck-rust-nightly-complete-with-components-2026-04-22/lib -L/nix/store/bga5xf95jaypy385hvxm4h3yxl3m1566-openssl-3.6.1/lib
+mesonFlags=
+XCURSOR_SIZE=24
+DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+depsBuildTargetPropagated=
+depsBuildBuild=
+XDG_RUNTIME_DIR=/run/user/1000
+OLDPWD=/var/home/pni/dotfiles/nix
+XDG_SESSION_TYPE=wayland
+HOSTNAME=work-pc-linux
+NIX_BUILD_TOP=/tmp/nix-shell.z11nYI
+ZELLIJ_SESSION_NAME=marvellous-petunia
+SIZE=size
+CC=gcc
+DETERMINISTIC_BUILD=1
+CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
+LD=ld
+COLORTERM=truecolor
+LD_LIBRARY_PATH=/nix/store/8b15rqhpb4f16156ab8iibblaaipmj4r-icu4c-76.1/lib:/nix/store/ab3753m6i7isgvzphlar0a8xb84gl96i-gcc-15.2.0-lib/lib:/nix/store/2kdz3m7ic8w226pcvkz1dlg169v91p6a-zlib-1.3.2/lib::/nix/store/4vm1mnc2m614nka9k8admhfflvixp9lb-libice-1.1.2/lib:/nix/store/s3w1lg6xadcfqyxw0hbmgmh9cg5swr2r-libsm-1.2.6/lib:/nix/store/qi7spcan9lv78ag41bsmjrrhqrw496kq-libx11-1.8.13/lib:/nix/store/rv8pqqhcgrbfbn8bbma5axj7k2x7kfqf-libsecret-0.21.7/lib
+shell=/nix/store/v8sa6r6q037ihghxfbwzjj4p59v2x0pv-bash-5.3p9/bin/bash
+TERM_PROGRAM=ghostty
+system=x86_64-linux
+HOST_PATH=/nix/store/fl9k8r2871n4fp6wjlysrsmcvc3mx0lq-neovim-0.12.1/bin:/nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10/bin:/nix/store/m916vizl4wkninl4gi72dw7b560bfzcr-fzf-0.71.0/bin:/nix/store/hl02x2zjzg4j3rsx76l592mi48172kmn-lua-language-server-3.18.1/bin:/nix/store/3lz2npxc62d7jzgpnzjb558gd5k2b358-stylua-2.4.1/bin:/nix/store/pc20w2dzimf08nl1i8rsfik99garh3sj-vscode-langservers-extracted-4.10.0/bin:/nix/store/f1gc2i2vjy7v0w41mf38hfwvg92xcygw-roslyn-ls-5.7.0-1.26203.6/bin:/nix/store/afhc5ydqajy6c848ylslxgxfqqi4c7mf-prettier-3.6.2/bin:/nix/store/2lj4kkl914asl82krgp4294sy84kjipi-powershell-editor-services-4.5.0/bin:/nix/store/dmjhwvjiaycdsnqp31hn930f6il0pkjm-vscode-1.116.0/bin:/nix/store/aak1iap8614xdal2qvzfna60q6slj0w7-dotnetSdks/bin:/nix/store/vdhwrji1v690la89ibhk56z5r9aqpdqy-lazytest-0.1.0/bin:/nix/store/mw2qdhw28ipgdbfrj71r911j5hlcwi19-csharpier-0.30.2/bin:/nix/store/vrlgl10z3a5qaijn735ah999i7hsrbi8-azure-functions-core-tools-4.8.0/bin:/nix/store/8x217a2cn96x5d00vc1fl4yv17zg7akf-redis-8.2.3/bin:/nix/store/5nv6csba75flgnqqi7ywrhpwqm68y389-python3.13-azure-cli-2.85.0/bin:/nix/store/9wydb316qj8wq36zwhqqyizs20518alz-python3.13-antlr4-python3-runtime-4.13.2/bin:/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/bin:/nix/store/7gjd6rxq304w7dkmbb28mi7spqcvr5wx-python3.13-charset-normalizer-3.4.4/bin:/nix/store/9izcwwqv0015ssvvmb66dgqw14n1m4fa-python3.13-argcomplete-3.6.3/bin:/nix/store/7sc71y3h4gzlk4bz4x7iqbywz85d9y9s-python3.13-distro-1.9.0/bin:/nix/store/63ifvlki32jv76j8swqxbf0xpakgpjsx-python3.13-humanfriendly-10.0/bin:/nix/store/08vv9dlscgs5hcsraciwh5va510kxqmb-python3.13-jmespath-1.0.1/bin:/nix/store/vj2129zf5hvgwczhfwqb6zfnvm735b0c-python3.13-pygments-2.19.2/bin:/nix/store/icllijq1zv26rm371fjsf98353sn9aqs-python3.13-tabulate-0.10.0/bin:/nix/store/86wwkwjyqdp6jnxdzpqhp7kl7lk5blrb-python3.13-pkginfo-1.12.1.2/bin:/nix/store/vq3034s64l8w1nrb27qqh136x71bps3v-python3.13-chardet-5.2.0/bin:/nix/store/p3cxrhl5j4iar1swqcpk9gyh6g4l1nsv-python3.13-fabric-3.2.2/bin:/nix/store/1illnbd12vvvq3z2cifg125w3gkk9gxz-python3.13-invoke-2.2.1/bin:/nix/store/167n1kkv3fkhz5xb1mx386s86wp6yvs1-python3.13-jsondiff-2.2.1/bin:/nix/store/zzr30x22dayql215yighn73jj9zgi7cz-python3.13-semver-3.0.4/bin:/nix/store/vl4qr9ajfvn7hgsnwlq3hcd7d57vq9lz-python3.13-sshtunnel-0.4.0/bin:/nix/store/7b53w9phc2zs12swp8svb5ci6m1i0wxj-python3.13-websocket-client-1.9.0/bin:/nix/store/66b3aj87b21y7f7hlvks43irhlwgry4d-powershell-7.6.0/bin:/nix/store/fx3rzwwbqzsad6vaism0phnc9jc4a1jc-azure-storage-azcopy-10.31.1/bin:/nix/store/nqfb8x1iidds5x8n7qwgaaklb7gpcqxn-bicep-langserver-0.42.1/bin:/nix/store/44jjdp8ryshq71nngy62bwc1wylkyywx-azure-pipelines-ls-0.8/bin:/nix/store/4sxpiwh93l1kg87mn781py9lysjcq4ya-azurite-3.35.0/bin:/nix/store/7yvcckar1lzhqnr0xx2n19nsdjd4qa4d-git-2.53.0/bin:/nix/store/vgr20aqhf38qsx1mkcw6s6z3dfc4q05d-lazygit-0.61.1/bin:/nix/store/qj13v9wpp87gd5rivhah0mx8gdgdipkx-git-credential-manager-2.7.3/bin:/nix/store/bq93808fvzim5kjhfqwi0zflqq5zb8ix-gh-2.90.0/bin:/nix/store/sfvyavxai6qvzmv9p9x6mp4wwdz4v41m-bash-interactive-5.3p9/bin:/nix/store/3mmsnnd8dw6vbdk74rq4wcvmcyjzinh0-fish-4.6.0/bin:/nix/store/74sind1d6vf2bfwd7yklg8chsvzqxmmq-coreutils-9.10/bin:/nix/store/h6hdbgkfh59np7bi7h8qa76pq27ixz8r-gnugrep-3.12/bin:/nix/store/jpsqy47rdl0j0dvyyzb4kw8gqajw8nx0-gnused-4.9/bin:/nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/bin:/nix/store/cgnrajbfc7n46nv41l5cvd9n0gngsxk9-man-db-2.13.1/bin:/nix/store/836lndidk1144z81npf27c7dcgmczid3-fd-10.4.2/bin:/nix/store/922crn2k3v8yaqk7anps80hba919lnds-ripgrep-15.1.0/bin:/nix/store/cm2dgmaaw7pmxnl6xis3d58vn0na2a3f-zellij-0.44.1/bin:/nix/store/35g195wn2ianjb70299dqvspck892h4n-eza-0.23.4/bin:/nix/store/ilrxlvaydmr2qmsxqa07wiia3xrrdc1h-starship-1.24.2/bin:/nix/store/vid1fwpnf4vi0w2ngmcl6wmfd3lw8k79-yazi-26.1.22/bin:/nix/store/w2x3fcl4jazqbdd9jv6nxfwa0sfygvck-rust-nightly-complete-with-components-2026-04-22/bin:/nix/store/8xw16m4sx0diy4rxqn1wv54k8d28hand-rust-analyzer-preview-nightly-complete-2026-04-22/bin:/nix/store/8q9wrmngl1mhvqgg0l018339zz86m184-openssl-3.6.1-bin/bin:/nix/store/yypfs003asjgvwln7ph82x1hh5qgi9xl-uv-0.11.7/bin:/nix/store/14ikzr0d4i3qsrj8z2hclvvlh7kshqgs-pyright-1.1.408/bin:/nix/store/fx9hlriimvcjpk379p6ajrhh242nrq55-ruff-0.15.11/bin:/nix/store/v2210ar51jddnrcx46m53ivv9palc26m-nodejs-24.14.0/bin:/nix/store/d353y5jnirwjpibab1wa9z47v16i5p87-google-chrome-147.0.7727.101/bin:/nix/store/227nwg0pwwsml5awd20jqyn0048nndsl-chromedriver-unwrapped-147.0.7727.101/bin:/nix/store/5d2q6sis0bz6h59g7qw4b09yx4d3galn-xwayland-satellite-0.8.1/bin:/nix/store/dqipl5qqm4g3pxkab851jsynkr12qv5s-waybar-mpris-0.1.0-unstable-2022-01-27/bin:/nix/store/74sind1d6vf2bfwd7yklg8chsvzqxmmq-coreutils-9.10/bin:/nix/store/c89zz4vh8v9dbs8169wk8ahwxvrdxgm5-findutils-4.10.0/bin:/nix/store/355mp4ns4042sb5p51rx3ys4mlliiwc5-diffutils-3.12/bin:/nix/store/jpsqy47rdl0j0dvyyzb4kw8gqajw8nx0-gnused-4.9/bin:/nix/store/h6hdbgkfh59np7bi7h8qa76pq27ixz8r-gnugrep-3.12/bin:/nix/store/gg169kyil5vhsg5aqcpagyhs8fwl0r5r-gawk-5.3.2/bin:/nix/store/kvmqv1jqv4792rsihf7yjc5kwk3d8z6x-gnutar-1.35/bin:/nix/store/pnxiz967z73a45f4x7c1icldjaaqmlcp-gzip-1.14/bin:/nix/store/by6npbc13ly5a1zgsqghv7wv5bklyiny-bzip2-1.0.8-bin/bin:/nix/store/1fvcxyhg3i5fvw0j4l8wmyml10dnvm7q-gnumake-4.4.1/bin:/nix/store/v8sa6r6q037ihghxfbwzjj4p59v2x0pv-bash-5.3p9/bin:/nix/store/ca84rbhb0bhwdcci7q51dad20nkbn9xc-patch-2.8/bin:/nix/store/g6mlwdvpg92rchq352ll7jbi0pz7h43r-xz-5.8.2-bin/bin:/nix/store/kjg8z2k0zvsczaij78803g7imlfm1vfb-file-5.45/bin
+HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
+_PYTHON_HOST_PLATFORM=linux-x86_64
+GCM_CREDENTIAL_STORE=secretservice
+SOURCE_DATE_EPOCH=315532800
+propagatedNativeBuildInputs=
+SYSTEMD_EXEC_PID=5097
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+PYTHONPATH=/nix/store/skk5v0ni325kha66hbqp3yryibx5xr79-python3.13-cffi-2.0.0/lib/python3.13/site-packages:/nix/store/fpijs58n959pnl0xs46w591l6slwgfxs-python3.13-pycparser-3.00/lib/python3.13/site-packages:/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib/python3.13/site-packages:/nix/store/5nv6csba75flgnqqi7ywrhpwqm68y389-python3.13-azure-cli-2.85.0/lib/python3.13/site-packages:/nix/store/9wydb316qj8wq36zwhqqyizs20518alz-python3.13-antlr4-python3-runtime-4.13.2/lib/python3.13/site-packages:/nix/store/ks2djv6wdpv9594j7mvp04vrd4zazb0b-python3.13-azure-ai-projects-1.0.0/lib/python3.13/site-packages:/nix/store/6mljrpjgcl288y0zvvp2w8i1cyw01f0z-python3.13-azure-core-1.38.0/lib/python3.13/site-packages:/nix/store/knlk45h5km3r1i6i38izw3cmk6xznpqz-python3.13-requests-2.32.5/lib/python3.13/site-packages:/nix/store/3fgihc7c47w0nvi9qqkxkvaps3m7c1p2-python3.13-certifi-2026.01.04/lib/python3.13/site-packages:/nix/store/7gjd6rxq304w7dkmbb28mi7spqcvr5wx-python3.13-charset-normalizer-3.4.4/lib/python3.13/site-packages:/nix/store/srb6n37b2ah22a9zxpqj2igxm9h3wpvf-python3.13-idna-3.11/lib/python3.13/site-packages:/nix/store/b0xhg85g0xbrxkggmhy2zxiqsk5jzanm-python3.13-urllib3-2.6.3/lib/python3.13/site-packages:/nix/store/6w1acfg243ykxnnfiis7f41q8q0z9ii4-python3.13-six-1.17.0/lib/python3.13/site-packages:/nix/store/llv9b1i1c1j8dzkakysmgn99nicjlcs1-python3.13-typing-extensions-4.15.0/lib/python3.13/site-packages:/nix/store/gx2nax10w43xf1yi2j84nmf06a8h05c4-python3.13-azure-storage-blob-12.28.0/lib/python3.13/site-packages:/nix/store/k8bfmx9z1zp12r25b8j8pcvp31djrclp-python3.13-cryptography-46.0.5/lib/python3.13/site-packages:/nix/store/6p39p1aqgxd1gd1k2a885d4qiwzxs2wc-python3.13-isodate-0.7.2/lib/python3.13/site-packages:/nix/store/2wxpgd193h48fg2xr2z6wfj308k3k6xh-python3.13-azure-ai-agents-1.1.0/lib/python3.13/site-packages:/nix/store/hmy5brm55v35ig5azc7k9498g83qnyhq-python3.13-azure-appconfiguration-1.7.2/lib/python3.13/site-packages:/nix/store/arizr2wfv2kacwxi078fv71w3s45fgss-python3.13-azure-batch-15.0.0b1/lib/python3.13/site-packages:/nix/store/gi96xrhbnfw9m8plqmn1f9w94pbx0w48-python3.13-azure-common-1.1.28/lib/python3.13/site-packages:/nix/store/x9kwmcgbkzxa6zj7m7psvb6586r5z400-python3.13-azure-nspkg-3.0.2/lib/python3.13/site-packages:/nix/store/2g7b58diwm56ysfb1d7q7l57slr1di79-python3.13-msrestazure-0.6.4/lib/python3.13/site-packages:/nix/store/bk29b90ns454rkgwx3yrzb4hbs2arzch-python3.13-adal-1.2.7/lib/python3.13/site-packages:/nix/store/hw94rffqxzhip7idgg9lz8nn9ndvmaxc-python3.13-pyjwt-2.11.0/lib/python3.13/site-packages:/nix/store/l059196sbc8qrpqfz12x0hgnhpq0qizf-python3.13-python-dateutil-2.9.0.post0/lib/python3.13/site-packages:/nix/store/5bnhdwh7dq8krg1rwdjyi9z4bi2zr1gp-python3.13-msrest-0.7.1/lib/python3.13/site-packages:/nix/store/qaq17pwsimzblisdx2fmzjwj63da0dhm-python3.13-aiodns-4.0.0/lib/python3.13/site-packages:/nix/store/i4wi5ydhlybksnjmqmal31wz11vml5hw-python3.13-pycares-5.0.1/lib/python3.13/site-packages:/nix/store/h2vv1kh2w1lh7kik1ia6df2qbvznk23m-python3.13-aiohttp-3.13.3/lib/python3.13/site-packages:/nix/store/96359g65nnqnar7yahqq33jnxpmqmycz-python3.13-aiohappyeyeballs-2.6.1/lib/python3.13/site-packages:/nix/store/iliyv32hcirhjvn1jpsjmpd3q291k7jc-python3.13-aiosignal-1.4.0/lib/python3.13/site-packages:/nix/store/p0m5qnr0hhipzvxjby51nrnnbss9pskf-python3.13-frozenlist-1.8.0/lib/python3.13/site-packages:/nix/store/pll8ddlpmykcjmxpfls6dascf411h1kb-python3.13-attrs-25.4.0/lib/python3.13/site-packages:/nix/store/3nyq8x1cc4dfx00gzi1q0c53wvgwiq15-python3.13-multidict-6.7.1/lib/python3.13/site-packages:/nix/store/4q0ihg5pbin11pqzgdmiixjazwahz3zl-python3.13-propcache-0.4.1/lib/python3.13/site-packages:/nix/store/vgdklpagkmd6cijancbcn8dwmn4r7xkq-python3.13-yarl-1.23.0/lib/python3.13/site-packages:/nix/store/hblsz14gxz3makdwslqs856dxsyvrra3-python3.13-brotli-1.2.0/lib/python3.13/site-packages:/nix/store/vlxvp9i8vk7z9bdgz1zh2x55zp4wq3cd-python3.13-backports-zstd-1.3.0/lib/python3.13/site-packages:/nix/store/c74gm2l6f3zp2nfmjqwxbrfx08lla6ya-python3.13-requests-oauthlib-2.0.0/lib/python3.13/site-packages:/nix/store/qbzcd40kcdc0zbnf6cjl6lrap35skj16-python3.13-oauthlib-3.3.1/lib/python3.13/site-packages:/nix/store/yvhpd2arcxy824yzc2gh3c3yb45q4p3i-python3.13-azure-cli-core-2.85.0/lib/python3.13/site-packages:/nix/store/9izcwwqv0015ssvvmb66dgqw14n1m4fa-python3.13-argcomplete-3.6.3/lib/python3.13/site-packages:/nix/store/w3lv16db7wnfkamdg7zhi9qhql306kb0-python3.13-azure-cli-telemetry-1.1.0/lib/python3.13/site-packages:/nix/store/3r0n8p2y9wzdyh2nnlckssrcd9k3m2d9-python3.13-applicationinsights-0.11.10/lib/python3.13/site-packages:/nix/store/374lzk7nw0hs0050s3m8iwqg0d4qlx2f-python3.13-portalocker-3.2.0/lib/python3.13/site-packages:/nix/store/6j63mvqqzinygcyidsdskxs0fbsn7p1c-python3.13-redis-7.2.1/lib/python3.13/site-packages:/nix/store/yhjmhh75n51aayj0ca4x67sx44w5x4a9-python3.13-azure-mgmt-core-1.6.0/lib/python3.13/site-packages:/nix/store/7sc71y3h4gzlk4bz4x7iqbywz85d9y9s-python3.13-distro-1.9.0/lib/python3.13/site-packages:/nix/store/63ifvlki32jv76j8swqxbf0xpakgpjsx-python3.13-humanfriendly-10.0/lib/python3.13/site-packages:/nix/store/08vv9dlscgs5hcsraciwh5va510kxqmb-python3.13-jmespath-1.0.1/lib/python3.13/site-packages:/nix/store/acyn02yf2plr25asc5y992159jg9kjdv-python3.13-knack-0.13.0/lib/python3.13/site-packages:/nix/store/pd3pn622xjwpvdzhnmail8kdd20mqj7z-python3.13-colorama-0.4.6/lib/python3.13/site-packages:/nix/store/vj2129zf5hvgwczhfwqb6zfnvm735b0c-python3.13-pygments-2.19.2/lib/python3.13/site-packages:/nix/store/4k25zhrdxqvihfq3b1rh1kydpz92v8mr-python3.13-pyyaml-6.0.3/lib/python3.13/site-packages:/nix/store/icllijq1zv26rm371fjsf98353sn9aqs-python3.13-tabulate-0.10.0/lib/python3.13/site-packages:/nix/store/lykm7s0b8bsjnf1x3w55rm0zj10h17dg-python3.13-microsoft-security-utilities-secret-masker-1.0.0b4/lib/python3.13/site-packages:/nix/store/xvkkp5yd84967244wg5hb1bchhgp9p6k-python3.13-msal-extensions-1.3.1/lib/python3.13/site-packages:/nix/store/09mjl450s8blck39pj0fpkyr9jh02w6s-python3.13-msal-1.34.0/lib/python3.13/site-packages:/nix/store/s4bgaz6kjsji768p4v3g4xk803mdxjxa-python3.13-packaging-25.0/lib/python3.13/site-packages:/nix/store/b0l6yql12z4v9qdmda65qmi45n2f2q9q-python3.13-paramiko-4.0.0/lib/python3.13/site-packages:/nix/store/s51x4z1g0rch9yfcm6jg356zwl5280pw-python3.13-bcrypt-5.0.0/lib/python3.13/site-packages:/nix/store/l7czcf0iv6q91yj25p2g9r7ryvns565k-python3.13-pynacl-1.6.2/lib/python3.13/site-packages:/nix/store/86wwkwjyqdp6jnxdzpqhp7kl7lk5blrb-python3.13-pkginfo-1.12.1.2/lib/python3.13/site-packages:/nix/store/8ra5bbnh12zb5sa1qh7rldgpnm6pll8y-python3.13-psutil-7.2.1/lib/python3.13/site-packages:/nix/store/3z1jr9725g7bvb54jy3lcc3x2fasisbc-python3.13-py-deviceid-0.1.1/lib/python3.13/site-packages:/nix/store/y5wy41m00xgdp8lmp5y4dxjyj8nzad92-python3.13-pyopenssl-25.3.0/lib/python3.13/site-packages:/nix/store/i3qrz5j3j63myh83jij2fg59wxjyn4m6-python3.13-pysocks-1.7.1/lib/python3.13/site-packages:/nix/store/2bxspgvnxi9zsb0al8rijjq650ajg98v-python3.13-azure-cosmos-4.14.5/lib/python3.13/site-packages:/nix/store/7l00nkphq1qrp84m7xf2jinszib78pvm-python3.13-azure-data-tables-12.7.0/lib/python3.13/site-packages:/nix/store/lz8k4akgf6sl1hpmi981d5mk2v7381r4-python3.13-azure-datalake-store-1.0.1/lib/python3.13/site-packages:/nix/store/mjyv71fk23nygf23gihmnylr58jb4fpd-python3.13-azure-keyvault-administration-4.6.0/lib/python3.13/site-packages:/nix/store/0633x8sn5shclp7i5k44sgha21q31wfp-python3.13-azure-keyvault-certificates-4.10.0/lib/python3.13/site-packages:/nix/store/2l7l251pnhphl99va72iml72ka07vlh6-python3.13-azure-keyvault-keys-4.11.0/lib/python3.13/site-packages:/nix/store/fnmyxwrm29ind94my11lzhyxy3xrd3mv-python3.13-azure-keyvault-secrets-4.10.0/lib/python3.13/site-packages:/nix/store/ymgklmn1gia99rkfal475p413bdn88r6-python3.13-azure-keyvault-securitydomain-1.0.0b1/lib/python3.13/site-packages:/nix/store/c3cz1fc7npcimqvkrzxbd89zl8bikqpa-python3.13-azure-mgmt-advisor-9.0.0/lib/python3.13/site-packages:/nix/store/5avs4i00sfq0574apq337r6bcdg99hw6-python3.13-azure-mgmt-apimanagement-5.0.0/lib/python3.13/site-packages:/nix/store/4vcknlyzf2h8fxpj076a6qdibwxkb1hr-python3.13-azure-mgmt-appconfiguration-6.0.0b1/lib/python3.13/site-packages:/nix/store/7r7xbidc9cv4dn7b452lmfzkbc6ryb9y-python3.13-azure-mgmt-appcontainers-4.0.0/lib/python3.13/site-packages:/nix/store/hyhmrkwmdcccrv79vigdf5kyhzm03k64-python3.13-azure-mgmt-applicationinsights-4.1.0/lib/python3.13/site-packages:/nix/store/bvjp1ax2isn9d83xy2g4787cp3p35wp1-python3.13-azure-mgmt-authorization-4.0.0/lib/python3.13/site-packages:/nix/store/pmgby546zdraq5y8hrl0zlyzn5h5xh4i-python3.13-azure-mgmt-batchai-7.0.0/lib/python3.13/site-packages:/nix/store/if350m4j72bklda991cxk952dkkbad9m-python3.13-azure-mgmt-batch-18.0.0/lib/python3.13/site-packages:/nix/store/g0qgy2f4v8v02681xhwk4qgci4gik61n-python3.13-azure-mgmt-billing-6.0.0/lib/python3.13/site-packages:/nix/store/ai5lffh68g65c5nh4wbcn68c4kc3yh9m-python3.13-azure-mgmt-botservice-2.0.0/lib/python3.13/site-packages:/nix/store/2r7kn144plav4vqwn9ra3bnmf4l2mi1b-python3.13-azure-mgmt-cdn-12.0.0/lib/python3.13/site-packages:/nix/store/v8y5b4l62j9l4p7ynf4ywy7451i06hm7-python3.13-azure-mgmt-cognitiveservices-14.1.0/lib/python3.13/site-packages:/nix/store/sr1j6v7c3bfp1p82ca7sa6krbwg11vbg-python3.13-azure-mgmt-compute-34.1.0/lib/python3.13/site-packages:/nix/store/h6sqf1z7a4n6fbrg88hkbjg11d756678-python3.13-azure-mgmt-common-0.20.0/lib/python3.13/site-packages:/nix/store/3nivysl36fjnxmcrzgrlmdvrkr6kmakl-python3.13-azure-mgmt-nspkg-3.0.2/lib/python3.13/site-packages:/nix/store/dhw64mrqarmaaima50jwpd0ir39kwhca-python3.13-azure-mgmt-containerinstance-10.2.0b1/lib/python3.13/site-packages:/nix/store/wn86dypaw3qmb7s3ajw66gnzszy1y4vq-python3.13-azure-mgmt-containerregistry-15.1.0b1/lib/python3.13/site-packages:/nix/store/3c9224fmragwb0zr3d20yl4vz2f1wf2m-python3.13-azure-mgmt-containerregistrytasks-1.0.0b1/lib/python3.13/site-packages:/nix/store/iy7nzck4792brig50n2grpc9gypc3p30-python3.13-azure-mgmt-containerservice-41.0.0/lib/python3.13/site-packages:/nix/store/j8iwh1wbr4v75r5nnfb52wcm1kybhaw6-python3.13-azure-mgmt-cosmosdb-9.9.0/lib/python3.13/site-packages:/nix/store/3wzx80mlmm249v4x1liphcm1fjqbv5vd-python3.13-azure-mgmt-datalake-store-1.0.0/lib/python3.13/site-packages:/nix/store/zwz1vxlydc78xrv8zpszxjl7ifdw6xz0-python3.13-azure-mgmt-datalake-nspkg-3.0.1/lib/python3.13/site-packages:/nix/store/07c3sqf9d1nl3gqjw3cqnfnsplph0cz1-python3.13-azure-mgmt-datamigration-10.1.0/lib/python3.13/site-packages:/nix/store/7d5095ag6b1vrchv3yqps71lrkhbiiv7-python3.13-azure-mgmt-eventgrid-10.2.0b2/lib/python3.13/site-packages:/nix/store/cv5i9czl9cnx1kdrv821wxrwwc2amnxg-python3.13-azure-mgmt-eventhub-11.2.0/lib/python3.13/site-packages:/nix/store/z9qi3dwcw3kq29m94hg6bkmq444lnjf7-python3.13-azure-mgmt-extendedlocation-2.0.0/lib/python3.13/site-packages:/nix/store/9yp3psi1l9m1iw2xsflfyq1b13l78kqi-python3.13-azure-mgmt-hdinsight-9.0.0b3/lib/python3.13/site-packages:/nix/store/jf058ax4dc5j5mwxipi6zg0qivpjq8nd-python3.13-azure-mgmt-imagebuilder-1.4.0/lib/python3.13/site-packages:/nix/store/s0grkzcc1q5x6ga9l603qcs8xmg51ar8-python3.13-azure-mgmt-iotcentral-9.0.0/lib/python3.13/site-packages:/nix/store/ivghzkdvnibkzz46nh1wjmphsify1ps2-python3.13-azure-mgmt-iothub-4.0.0/lib/python3.13/site-packages:/nix/store/dnixhvlx1qbah5i3b3a1qa0qwza4f4kx-python3.13-azure-mgmt-iothubprovisioningservices-1.1.0/lib/python3.13/site-packages:/nix/store/50xwjcpd82ng7vjnghhlsc5p8vjs93yl-python3.13-azure-mgmt-keyvault-14.0.1/lib/python3.13/site-packages:/nix/store/39z0nmqs0ns7hn3sh04p9w1m915i8ar7-python3.13-azure-mgmt-loganalytics-12.0.0/lib/python3.13/site-packages:/nix/store/bkaczvbx538i27m810g2c3ali71cvrfn-python3.13-azure-mgmt-managementgroups-1.1.0/lib/python3.13/site-packages:/nix/store/mxvj57m20k6kk58y4m681j2igsh5cvn2-python3.13-azure-mgmt-maps-2.1.0/lib/python3.13/site-packages:/nix/store/4wdxyzmd0lhaqmjk0pb9qzg4c4dhxsb3-python3.13-azure-mgmt-marketplaceordering-1.1.0/lib/python3.13/site-packages:/nix/store/a9pfpqby0h52iglh6fpgd8lnaraj2p9p-python3.13-azure-mgmt-media-9.0.0/lib/python3.13/site-packages:/nix/store/jkhfp74m3r6l4l0kaydqpd4mf83ziw9s-python3.13-azure-mgmt-monitor-7.0.0b1/lib/python3.13/site-packages:/nix/store/75xahcinyfbscs23y8fn9ijvvk87idgi-python3.13-azure-mgmt-msi-7.1.0/lib/python3.13/site-packages:/nix/store/n53x899ipslicrv0vfv6d1vkz2f3dlh5-python3.13-azure-mgmt-netapp-15.0.0/lib/python3.13/site-packages:/nix/store/n9mcrj5amn9f9bwhr3dhlliwxp6abcfv-python3.13-azure-mgmt-policyinsights-1.0.0/lib/python3.13/site-packages:/nix/store/w7f64z5jxpdg6qwy7bnfvxj08ndm362d-python3.13-azure-mgmt-postgresqlflexibleservers-3.0.0b1/lib/python3.13/site-packages:/nix/store/429cb6kim38cf0y11jcmzszs6lvrjszv-python3.13-azure-mgmt-privatedns-1.2.0/lib/python3.13/site-packages:/nix/store/3pf5s9ijn140gi8dl6zsvjk9m8wszzi6-python3.13-azure-mgmt-rdbms-10.2.0b17/lib/python3.13/site-packages:/nix/store/g84iz00vnm4n3cq34jhymm67amk45pnb-python3.13-azure-mgmt-mysqlflexibleservers-1.1.0b2/lib/python3.13/site-packages:/nix/store/kfv88ykiv2shkkx26gg60r3gp5vh3fcs-python3.13-azure-mgmt-recoveryservicesbackup-9.2.0/lib/python3.13/site-packages:/nix/store/ridms1qvzl4pl23kzcljkv997kv9jwkl-python3.13-azure-mgmt-recoveryservices-4.0.0/lib/python3.13/site-packages:/nix/store/nl4m9ahynzqngsa6bpzxk1y5m03i0ali-python3.13-azure-mgmt-redhatopenshift-3.0.0/lib/python3.13/site-packages:/nix/store/x2srv42s140lpx3lylhahfbkrllzlqfx-python3.13-azure-mgmt-redis-14.5.0/lib/python3.13/site-packages:/nix/store/328xcjkp0w93bqi41kqdy848i16jzr4j-python3.13-azure-mgmt-resource-all-2.85.0/lib/python3.13/site-packages:/nix/store/v83kyi4i6hg8f3gf3mxk91azc19dpzcm-python3.13-azure-mgmt-search-9.2.0/lib/python3.13/site-packages:/nix/store/3sqx7i4w9hw34plgx3b8jhr29ng2pfq6-python3.13-azure-mgmt-security-7.0.0/lib/python3.13/site-packages:/nix/store/vcncbb56cjlxafgfcvnfpgn23cv7ga9d-python3.13-azure-mgmt-servicebus-8.2.0/lib/python3.13/site-packages:/nix/store/1d7zvki9ny58v6xc625qjnp74sf4isj9-python3.13-azure-mgmt-servicefabricmanagedclusters-2.0.0/lib/python3.13/site-packages:/nix/store/wzwrpi74jfxjipp0hah7iv6djycgnijn-python3.13-azure-mgmt-servicelinker-1.1.0/lib/python3.13/site-packages:/nix/store/bpixyd0ivqb3h8rilnql12jdn92k0rim-python3.13-azure-mgmt-servicefabric-2.1.0/lib/python3.13/site-packages:/nix/store/z4h3m32id8498r7hxw42cgb2i53bk8nh-python3.13-azure-mgmt-signalr-2.0.0b2/lib/python3.13/site-packages:/nix/store/yl1wgzh1nz5dwv0vw7xsd6q9v2prgf4y-python3.13-azure-mgmt-sqlvirtualmachine-1.0.0b5/lib/python3.13/site-packages:/nix/store/xl4cjn2nm5wwh85a86narc6xygh44p90-python3.13-azure-mgmt-sql-4.0.0b22/lib/python3.13/site-packages:/nix/store/wjbj8pbpkvqb0d5qyvgyhjg3c4qjg9d2-python3.13-azure-mgmt-storage-24.0.1/lib/python3.13/site-packages:/nix/store/qk5zssll2ff5fafp4wzfrq2jf3bk64cl-python3.13-azure-mgmt-synapse-2.1.0b5/lib/python3.13/site-packages:/nix/store/wv73zvcikx4ivajn59ls7ad7zm9qa800-python3.13-azure-mgmt-trafficmanager-1.1.0/lib/python3.13/site-packages:/nix/store/gx40ih5x3r25awnjny8czrnp1j8jn4wc-python3.13-azure-mgmt-web-9.0.0/lib/python3.13/site-packages:/nix/store/8ciyh333xiyv9b0if5w1nqlvyaiv9062-python3.13-azure-monitor-query-2.0.0/lib/python3.13/site-packages:/nix/store/8l1zzrx1xxvrh2ihalashc53bs2j6x2y-python3.13-azure-storage-common-2.1.0/lib/python3.13/site-packages:/nix/store/xgpakw0rq2rd1a3b1apbk1zvinn0x3v2-python3.13-azure-storage-file-datalake-12.21.0/lib/python3.13/site-packages:/nix/store/ix9lhkr480jdykzs3baacv7lkc3w7c4v-python3.13-azure-storage-file-share-12.24.0/lib/python3.13/site-packages:/nix/store/wv41jnyc1kjczsgkb60s68rhvmbmsja5-python3.13-azure-storage-queue-12.15.0/lib/python3.13/site-packages:/nix/store/0vx7ajl5hg7gqhxkhv3f0hk4is9wbjnr-python3.13-azure-synapse-accesscontrol-0.7.0/lib/python3.13/site-packages:/nix/store/s3ppgmflg7dvqfvyqsr17ywj9w0mgmky-python3.13-azure-synapse-artifacts-0.22.0/lib/python3.13/site-packages:/nix/store/10ppyg1l1f2c4wbdn80qs5q25sji9fyr-python3.13-azure-synapse-managedprivateendpoints-0.4.0/lib/python3.13/site-packages:/nix/store/i51jc749yblchkxw2iizs23h9gaclrrp-python3.13-azure-synapse-spark-0.7.0/lib/python3.13/site-packages:/nix/store/vq3034s64l8w1nrb27qqh136x71bps3v-python3.13-chardet-5.2.0/lib/python3.13/site-packages:/nix/store/p3cxrhl5j4iar1swqcpk9gyh6g4l1nsv-python3.13-fabric-3.2.2/lib/python3.13/site-packages:/nix/store/1illnbd12vvvq3z2cifg125w3gkk9gxz-python3.13-invoke-2.2.1/lib/python3.13/site-packages:/nix/store/2k3mymknn41hf1hpr5fk7lf34098lc3d-python3.13-deprecated-1.3.1/lib/python3.13/site-packages:/nix/store/yqps3v7ajmah97flgfcb8lr6vj0sybcl-python3.13-wrapt-1.17.2/lib/python3.13/site-packages:/nix/store/gqf2lvmq1k7q1kl6jzh88dy4h0lrrpc3-python3.13-decorator-5.2.1/lib/python3.13/site-packages:/nix/store/n534hj1rz49hhmpp2hbaxdhq8a15psgf-python3.13-javaproperties-0.8.2/lib/python3.13/site-packages:/nix/store/167n1kkv3fkhz5xb1mx386s86wp6yvs1-python3.13-jsondiff-2.2.1/lib/python3.13/site-packages:/nix/store/ky1jxdjmz9b8l70vn6vj0x5alavvwyxc-python3.13-pycomposefile-0.0.34/lib/python3.13/site-packages:/nix/store/isb223pzdf8zk3rz1j9rw6pb7pgfgbg1-python3.13-pygithub-2.8.1/lib/python3.13/site-packages:/nix/store/8fvn2haxm35sqnwyrnlfmdf2al0l0iks-python3.13-scp-0.15.0/lib/python3.13/site-packages:/nix/store/zzr30x22dayql215yighn73jj9zgi7cz-python3.13-semver-3.0.4/lib/python3.13/site-packages:/nix/store/vl4qr9ajfvn7hgsnwlq3hcd7d57vq9lz-python3.13-sshtunnel-0.4.0/lib/python3.13/site-packages:/nix/store/7b53w9phc2zs12swp8svb5ci6m1i0wxj-python3.13-websocket-client-1.9.0/lib/python3.13/site-packages:/nix/store/2an6pk9dw6lms8vskhbidla1i2h0wdp5-python3.13-xmltodict-1.0.2/lib/python3.13/site-packages:/nix/store/jldwaqq2p69ms46wpf74aw5rllnhwz6j-python3.13-setuptools-80.10.1/lib/python3.13/site-packages
+MANAGERPID=4909
+cmakeFlags=
+BREW_BASH_COMPLETION=1
+GHOSTTY_SHELL_FEATURES=cursor,path,title
+GNOME_SHELL_SLOWDOWN_FACTOR=0.8
+NIX_ENFORCE_NO_NATIVE=1
+XCURSOR_THEME=default
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+CXX=g++
+outputs=out
+LANG=en_DK.UTF-8
+NIRI_SOCKET=/run/user/1000/niri.wayland-1.5097.sock
+CONFIG_SHELL=/nix/store/v8sa6r6q037ihghxfbwzjj4p59v2x0pv-bash-5.3p9/bin/bash
+MSBUILDALWAYSOVERWRITEREADONLYFILES=1
+XDG_SESSION_ID=6
+OBJDUMP=objdump
+HOMEBREW_REPOSITORY=/home/linuxbrew/.linuxbrew/Homebrew
+XDG_DATA_DIRS=/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/share:/nix/store/sj3f6y3j8m1831l0gqm1bsk1f46jzkfd-patchelf-0.15.2/share:/var/home/pni/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/home/pni/.nix-profile/share:/nix/var/nix/profiles/default/share:/var/home/pni/.nix-profile/share:/nix/var/nix/profiles/default/share
+propagatedBuildInputs=
+MSBUILDTERMINALLOGGER=false
+MAIL=/var/spool/mail/pni
+XDG_VTNR=2
+DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
+DISPLAY=:0
+doInstallCheck=
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/niri.service/memory.pressure
+name=nix-shell-env
+CLAUDE_CODE_ENTRYPOINT=cli
+doCheck=
+NIX_BUILD_CORES=20
+HISTSIZE=1000
+XDG_SESSION_DESKTOP=niri
+out=/var/home/pni/outputs/out
+RANLIB=ranlib
+GDMSESSION=niri
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:
+HISTCONTROL=ignoredups
+AS=as
+XDG_SESSION_CLASS=user
+stdenv=/nix/store/gvq9hvvnmkvrk27mba0jjjppj068z55x-stdenv-linux
+USER=pni
+depsTargetTarget=
+AR=ar
+DISABLE_BUG_COMMAND=1
+CLAUDE_EFFORT=high
+AI_AGENT=claude-code_2-1-170_agent
+dontAddDisableDepTrack=1
+STARSHIP_SESSION_KEY=1644285201498528
+ZELLIJ_PANE_ID=4
+TMPDIR=/tmp/nix-shell.z11nYI
+TERM_PROGRAM_VERSION=1.2.3
+phases=buildPhase
+CLAUDECODE=1
+COREPACK_ENABLE_AUTO_PIN=0
+GHOSTTY_BIN_DIR=/usr/bin
+NM=nm
+DOTNET_ROOT=/nix/store/51cdk442saw0vsclpnl15jbvnz8srcc9-dotnet-runtime-wrapped-8.0.26/share/dotnet
+PATH=/nix/store/7yvcckar1lzhqnr0xx2n19nsdjd4qa4d-git-2.53.0/bin:/nix/store/k4d44dcjlqp3xr849x985myp0slfhp9n-gnupg-2.4.9/bin:/nix/store/7d85j2cx8cc0nqwnl940s4i8fhrdbq4a-password-store-1.7.4/bin:/nix/store/51cdk442saw0vsclpnl15jbvnz8srcc9-dotnet-runtime-wrapped-8.0.26/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/nix/store/aak1iap8614xdal2qvzfna60q6slj0w7-dotnetSdks/share/dotnet:/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/bin:/nix/store/sj3f6y3j8m1831l0gqm1bsk1f46jzkfd-patchelf-0.15.2/bin:/nix/store/hb2bs5fg5wkm04x565737qd5nh2hy5nk-gcc-wrapper-15.2.0/bin:/nix/store/lvwga6ivl1d4lnw0zis9ajs0rqx9gp4i-gcc-15.2.0/bin:/nix/store/9hm3jdm6kk4m4ppwjcxz4s1dsdvd6fin-glibc-2.42-51-bin/bin:/nix/store/74sind1d6vf2bfwd7yklg8chsvzqxmmq-coreutils-9.10/bin:/nix/store/x7ikkplbrv5dlihy1bqq32gp6lilkval-binutils-wrapper-2.44/bin:/nix/store/rfp8lhk4dl9syfn64rwb3h3c73426p08-binutils-2.44/bin:/nix/store/fl9k8r2871n4fp6wjlysrsmcvc3mx0lq-neovim-0.12.1/bin:/nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10/bin:/nix/store/m916vizl4wkninl4gi72dw7b560bfzcr-fzf-0.71.0/bin:/nix/store/hl02x2zjzg4j3rsx76l592mi48172kmn-lua-language-server-3.18.1/bin:/nix/store/3lz2npxc62d7jzgpnzjb558gd5k2b358-stylua-2.4.1/bin:/nix/store/pc20w2dzimf08nl1i8rsfik99garh3sj-vscode-langservers-extracted-4.10.0/bin:/nix/store/f1gc2i2vjy7v0w41mf38hfwvg92xcygw-roslyn-ls-5.7.0-1.26203.6/bin:/nix/store/afhc5ydqajy6c848ylslxgxfqqi4c7mf-prettier-3.6.2/bin:/nix/store/2lj4kkl914asl82krgp4294sy84kjipi-powershell-editor-services-4.5.0/bin:/nix/store/dmjhwvjiaycdsnqp31hn930f6il0pkjm-vscode-1.116.0/bin:/nix/store/aak1iap8614xdal2qvzfna60q6slj0w7-dotnetSdks/bin:/nix/store/vdhwrji1v690la89ibhk56z5r9aqpdqy-lazytest-0.1.0/bin:/nix/store/mw2qdhw28ipgdbfrj71r911j5hlcwi19-csharpier-0.30.2/bin:/nix/store/vrlgl10z3a5qaijn735ah999i7hsrbi8-azure-functions-core-tools-4.8.0/bin:/nix/store/8x217a2cn96x5d00vc1fl4yv17zg7akf-redis-8.2.3/bin:/nix/store/5nv6csba75flgnqqi7ywrhpwqm68y389-python3.13-azure-cli-2.85.0/bin:/nix/store/9wydb316qj8wq36zwhqqyizs20518alz-python3.13-antlr4-python3-runtime-4.13.2/bin:/nix/store/7gjd6rxq304w7dkmbb28mi7spqcvr5wx-python3.13-charset-normalizer-3.4.4/bin:/nix/store/9izcwwqv0015ssvvmb66dgqw14n1m4fa-python3.13-argcomplete-3.6.3/bin:/nix/store/7sc71y3h4gzlk4bz4x7iqbywz85d9y9s-python3.13-distro-1.9.0/bin:/nix/store/63ifvlki32jv76j8swqxbf0xpakgpjsx-python3.13-humanfriendly-10.0/bin:/nix/store/08vv9dlscgs5hcsraciwh5va510kxqmb-python3.13-jmespath-1.0.1/bin:/nix/store/vj2129zf5hvgwczhfwqb6zfnvm735b0c-python3.13-pygments-2.19.2/bin:/nix/store/icllijq1zv26rm371fjsf98353sn9aqs-python3.13-tabulate-0.10.0/bin:/nix/store/86wwkwjyqdp6jnxdzpqhp7kl7lk5blrb-python3.13-pkginfo-1.12.1.2/bin:/nix/store/vq3034s64l8w1nrb27qqh136x71bps3v-python3.13-chardet-5.2.0/bin:/nix/store/p3cxrhl5j4iar1swqcpk9gyh6g4l1nsv-python3.13-fabric-3.2.2/bin:/nix/store/1illnbd12vvvq3z2cifg125w3gkk9gxz-python3.13-invoke-2.2.1/bin:/nix/store/167n1kkv3fkhz5xb1mx386s86wp6yvs1-python3.13-jsondiff-2.2.1/bin:/nix/store/zzr30x22dayql215yighn73jj9zgi7cz-python3.13-semver-3.0.4/bin:/nix/store/vl4qr9ajfvn7hgsnwlq3hcd7d57vq9lz-python3.13-sshtunnel-0.4.0/bin:/nix/store/7b53w9phc2zs12swp8svb5ci6m1i0wxj-python3.13-websocket-client-1.9.0/bin:/nix/store/66b3aj87b21y7f7hlvks43irhlwgry4d-powershell-7.6.0/bin:/nix/store/fx3rzwwbqzsad6vaism0phnc9jc4a1jc-azure-storage-azcopy-10.31.1/bin:/nix/store/nqfb8x1iidds5x8n7qwgaaklb7gpcqxn-bicep-langserver-0.42.1/bin:/nix/store/44jjdp8ryshq71nngy62bwc1wylkyywx-azure-pipelines-ls-0.8/bin:/nix/store/4sxpiwh93l1kg87mn781py9lysjcq4ya-azurite-3.35.0/bin:/nix/store/vgr20aqhf38qsx1mkcw6s6z3dfc4q05d-lazygit-0.61.1/bin:/nix/store/qj13v9wpp87gd5rivhah0mx8gdgdipkx-git-credential-manager-2.7.3/bin:/nix/store/bq93808fvzim5kjhfqwi0zflqq5zb8ix-gh-2.90.0/bin:/nix/store/sfvyavxai6qvzmv9p9x6mp4wwdz4v41m-bash-interactive-5.3p9/bin:/nix/store/3mmsnnd8dw6vbdk74rq4wcvmcyjzinh0-fish-4.6.0/bin:/nix/store/h6hdbgkfh59np7bi7h8qa76pq27ixz8r-gnugrep-3.12/bin:/nix/store/jpsqy47rdl0j0dvyyzb4kw8gqajw8nx0-gnused-4.9/bin:/nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/bin:/nix/store/cgnrajbfc7n46nv41l5cvd9n0gngsxk9-man-db-2.13.1/bin:/nix/store/836lndidk1144z81npf27c7dcgmczid3-fd-10.4.2/bin:/nix/store/922crn2k3v8yaqk7anps80hba919lnds-ripgrep-15.1.0/bin:/nix/store/cm2dgmaaw7pmxnl6xis3d58vn0na2a3f-zellij-0.44.1/bin:/nix/store/35g195wn2ianjb70299dqvspck892h4n-eza-0.23.4/bin:/nix/store/ilrxlvaydmr2qmsxqa07wiia3xrrdc1h-starship-1.24.2/bin:/nix/store/vid1fwpnf4vi0w2ngmcl6wmfd3lw8k79-yazi-26.1.22/bin:/nix/store/w2x3fcl4jazqbdd9jv6nxfwa0sfygvck-rust-nightly-complete-with-components-2026-04-22/bin:/nix/store/8xw16m4sx0diy4rxqn1wv54k8d28hand-rust-analyzer-preview-nightly-complete-2026-04-22/bin:/nix/store/8q9wrmngl1mhvqgg0l018339zz86m184-openssl-3.6.1-bin/bin:/nix/store/yypfs003asjgvwln7ph82x1hh5qgi9xl-uv-0.11.7/bin:/nix/store/14ikzr0d4i3qsrj8z2hclvvlh7kshqgs-pyright-1.1.408/bin:/nix/store/fx9hlriimvcjpk379p6ajrhh242nrq55-ruff-0.15.11/bin:/nix/store/v2210ar51jddnrcx46m53ivv9palc26m-nodejs-24.14.0/bin:/nix/store/d353y5jnirwjpibab1wa9z47v16i5p87-google-chrome-147.0.7727.101/bin:/nix/store/227nwg0pwwsml5awd20jqyn0048nndsl-chromedriver-unwrapped-147.0.7727.101/bin:/nix/store/5d2q6sis0bz6h59g7qw4b09yx4d3galn-xwayland-satellite-0.8.1/bin:/nix/store/dqipl5qqm4g3pxkab851jsynkr12qv5s-waybar-mpris-0.1.0-unstable-2022-01-27/bin:/nix/store/74sind1d6vf2bfwd7yklg8chsvzqxmmq-coreutils-9.10/bin:/nix/store/c89zz4vh8v9dbs8169wk8ahwxvrdxgm5-findutils-4.10.0/bin:/nix/store/355mp4ns4042sb5p51rx3ys4mlliiwc5-diffutils-3.12/bin:/nix/store/jpsqy47rdl0j0dvyyzb4kw8gqajw8nx0-gnused-4.9/bin:/nix/store/h6hdbgkfh59np7bi7h8qa76pq27ixz8r-gnugrep-3.12/bin:/nix/store/gg169kyil5vhsg5aqcpagyhs8fwl0r5r-gawk-5.3.2/bin:/nix/store/kvmqv1jqv4792rsihf7yjc5kwk3d8z6x-gnutar-1.35/bin:/nix/store/pnxiz967z73a45f4x7c1icldjaaqmlcp-gzip-1.14/bin:/nix/store/by6npbc13ly5a1zgsqghv7wv5bklyiny-bzip2-1.0.8-bin/bin:/nix/store/1fvcxyhg3i5fvw0j4l8wmyml10dnvm7q-gnumake-4.4.1/bin:/nix/store/v8sa6r6q037ihghxfbwzjj4p59v2x0pv-bash-5.3p9/bin:/nix/store/ca84rbhb0bhwdcci7q51dad20nkbn9xc-patch-2.8/bin:/nix/store/g6mlwdvpg92rchq352ll7jbi0pz7h43r-xz-5.8.2-bin/bin:/nix/store/kjg8z2k0zvsczaij78803g7imlfm1vfb-file-5.45/bin:/var/home/pni/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/var/home/pni/.local/bin:/var/home/pni/bin:/var/home/pni/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/var/home/pni/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0/bin
+builder=/nix/store/v8sa6r6q037ihghxfbwzjj4p59v2x0pv-bash-5.3p9/bin/bash
+HOME=/var/home/pni
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+READELF=readelf
+depsHostHost=
+STRINGS=strings
+MUTTER_DEBUG_KMS_THREAD_TYPE=user
+SUDO_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SHLVL=4
+buildInputs=/nix/store/fl9k8r2871n4fp6wjlysrsmcvc3mx0lq-neovim-0.12.1 /nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10 /nix/store/m916vizl4wkninl4gi72dw7b560bfzcr-fzf-0.71.0 /nix/store/hl02x2zjzg4j3rsx76l592mi48172kmn-lua-language-server-3.18.1 /nix/store/3lz2npxc62d7jzgpnzjb558gd5k2b358-stylua-2.4.1 /nix/store/pc20w2dzimf08nl1i8rsfik99garh3sj-vscode-langservers-extracted-4.10.0 /nix/store/f1gc2i2vjy7v0w41mf38hfwvg92xcygw-roslyn-ls-5.7.0-1.26203.6 /nix/store/afhc5ydqajy6c848ylslxgxfqqi4c7mf-prettier-3.6.2 /nix/store/2lj4kkl914asl82krgp4294sy84kjipi-powershell-editor-services-4.5.0 /nix/store/dmjhwvjiaycdsnqp31hn930f6il0pkjm-vscode-1.116.0 /nix/store/aak1iap8614xdal2qvzfna60q6slj0w7-dotnetSdks /nix/store/vdhwrji1v690la89ibhk56z5r9aqpdqy-lazytest-0.1.0 /nix/store/mw2qdhw28ipgdbfrj71r911j5hlcwi19-csharpier-0.30.2 /nix/store/vrlgl10z3a5qaijn735ah999i7hsrbi8-azure-functions-core-tools-4.8.0 /nix/store/8x217a2cn96x5d00vc1fl4yv17zg7akf-redis-8.2.3 /nix/store/5nv6csba75flgnqqi7ywrhpwqm68y389-python3.13-azure-cli-2.85.0 /nix/store/66b3aj87b21y7f7hlvks43irhlwgry4d-powershell-7.6.0 /nix/store/fx3rzwwbqzsad6vaism0phnc9jc4a1jc-azure-storage-azcopy-10.31.1 /nix/store/nqfb8x1iidds5x8n7qwgaaklb7gpcqxn-bicep-langserver-0.42.1 /nix/store/44jjdp8ryshq71nngy62bwc1wylkyywx-azure-pipelines-ls-0.8 /nix/store/4sxpiwh93l1kg87mn781py9lysjcq4ya-azurite-3.35.0 /nix/store/7yvcckar1lzhqnr0xx2n19nsdjd4qa4d-git-2.53.0 /nix/store/vgr20aqhf38qsx1mkcw6s6z3dfc4q05d-lazygit-0.61.1 /nix/store/qj13v9wpp87gd5rivhah0mx8gdgdipkx-git-credential-manager-2.7.3 /nix/store/bq93808fvzim5kjhfqwi0zflqq5zb8ix-gh-2.90.0 /nix/store/832yrsfhq3z41zn9rqsvv0cv22mblv4c-bash-interactive-5.3p9-dev /nix/store/3mmsnnd8dw6vbdk74rq4wcvmcyjzinh0-fish-4.6.0 /nix/store/836lndidk1144z81npf27c7dcgmczid3-fd-10.4.2 /nix/store/922crn2k3v8yaqk7anps80hba919lnds-ripgrep-15.1.0 /nix/store/cm2dgmaaw7pmxnl6xis3d58vn0na2a3f-zellij-0.44.1 /nix/store/35g195wn2ianjb70299dqvspck892h4n-eza-0.23.4 /nix/store/ilrxlvaydmr2qmsxqa07wiia3xrrdc1h-starship-1.24.2 /nix/store/vid1fwpnf4vi0w2ngmcl6wmfd3lw8k79-yazi-26.1.22 /nix/store/w2x3fcl4jazqbdd9jv6nxfwa0sfygvck-rust-nightly-complete-with-components-2026-04-22 /nix/store/8xw16m4sx0diy4rxqn1wv54k8d28hand-rust-analyzer-preview-nightly-complete-2026-04-22 /nix/store/79xszwqidf98ag703b5c82q3pwg9lyzq-openssl-3.6.1-dev /nix/store/yypfs003asjgvwln7ph82x1hh5qgi9xl-uv-0.11.7 /nix/store/14ikzr0d4i3qsrj8z2hclvvlh7kshqgs-pyright-1.1.408 /nix/store/fx9hlriimvcjpk379p6ajrhh242nrq55-ruff-0.15.11 /nix/store/v2210ar51jddnrcx46m53ivv9palc26m-nodejs-24.14.0 /nix/store/d353y5jnirwjpibab1wa9z47v16i5p87-google-chrome-147.0.7727.101 /nix/store/227nwg0pwwsml5awd20jqyn0048nndsl-chromedriver-unwrapped-147.0.7727.101 /nix/store/ys5hrp8fq4w5fiifw7jiqs6axffskav8-playwright-browsers /nix/store/5d2q6sis0bz6h59g7qw4b09yx4d3galn-xwayland-satellite-0.8.1 /nix/store/dqipl5qqm4g3pxkab851jsynkr12qv5s-waybar-mpris-0.1.0-unstable-2022-01-27
+strictDeps=
+patches=
+DOTNET_NOLOGO=1
+__structuredAttrs=
+GDM_LANG=en_DK.UTF-8
+DISABLE_ERROR_REPORTING=1
+XDG_CURRENT_DESKTOP=niri
+GETTEXTDATADIRS=/nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/share/gettext
+DOTNET_SKIP_WORKLOAD_INTEGRITY_CHECK=1
+TERMINFO=/usr/share/terminfo
+USERNAME=pni
+NoDefaultCurrentDirectoryInExePath=1
+STRIP=strip
+STARSHIP_SHELL=fish
+NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+PYTHONHASHSEED=0
+GHOSTTY_RESOURCES_DIR=/usr/share/ghostty
+HOMEBREW_CELLAR=/home/linuxbrew/.linuxbrew/Cellar
+PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true
+CLAUDE_CODE_EXECPATH=/var/home/pni/.local/share/claude/versions/2.1.170
+depsBuildTarget=
+INFOPATH=/home/linuxbrew/.linuxbrew/share/info:
+PLAYWRIGHT_BROWSERS_PATH=/nix/store/ys5hrp8fq4w5fiifw7jiqs6axffskav8-playwright-browsers
+GPG_TTY=/dev/pts/0
+GIT_EDITOR=true
+DESKTOP_SESSION=niri
+depsTargetTargetPropagated=
+GIT_TRACE2_PARENT_SID=a9646bc1-3683-4bdd-820c-afda9db20ba1
+DOTNET_CLI_TELEMETRY_OPTOUT=1
+depsBuildBuildPropagated=
+buildPhase={ echo "------------------------------------------------------------";
+  echo " WARNING: the existence of this path is not guaranteed.";
+  echo " It is an internal implementation detail for pkgs.mkShell.";
+  echo "------------------------------------------------------------";
+  echo;
+  # Record all build inputs as runtime dependencies
+  export;
+} >> "$out"
+
+XDG_SEAT=seat0
+TMP=/tmp/nix-shell.z11nYI
+NIX_PROFILES=/nix/var/nix/profiles/default /var/home/pni/.nix-profile
+NIX_CFLAGS_COMPILE= -frandom-seed=djr2pch3kn -isystem /nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/include -isystem /nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10/include -isystem /nix/store/832yrsfhq3z41zn9rqsvv0cv22mblv4c-bash-interactive-5.3p9-dev/include -isystem /nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/include -isystem /nix/store/79xszwqidf98ag703b5c82q3pwg9lyzq-openssl-3.6.1-dev/include -isystem /nix/store/v2210ar51jddnrcx46m53ivv9palc26m-nodejs-24.14.0/include -isystem /nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/include -isystem /nix/store/7yiiywqw2db840zsgjvayq204jm0m9zw-tree-sitter-0.25.10/include -isystem /nix/store/832yrsfhq3z41zn9rqsvv0cv22mblv4c-bash-interactive-5.3p9-dev/include -isystem /nix/store/kfci1gnn12ip5xy492m0hd10hmgyxr6x-gettext-0.26/include -isystem /nix/store/79xszwqidf98ag703b5c82q3pwg9lyzq-openssl-3.6.1-dev/include -isystem /nix/store/v2210ar51jddnrcx46m53ivv9palc26m-nodejs-24.14.0/include
+shellHook=            # Expose common shared libs so pip/uv-installed Python wheels
+            # (numpy, pandas, etc.) can find libstdc++ and friends at runtime.
+            export LD_LIBRARY_PATH="/nix/store/ab3753m6i7isgvzphlar0a8xb84gl96i-gcc-15.2.0-lib/lib:/nix/store/2kdz3m7ic8w226pcvkz1dlg169v91p6a-zlib-1.3.2/lib:$LD_LIBRARY_PATH"
+
+            export PLAYWRIGHT_BROWSERS_PATH="/nix/store/ys5hrp8fq4w5fiifw7jiqs6axffskav8-playwright-browsers"
+            export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true;
+
+            export DOTNET_ROOT="/nix/store/aak1iap8614xdal2qvzfna60q6slj0w7-dotnetSdks/share/dotnet"
+            export DOTNET_ROOT_X64="$DOTNET_ROOT"
+            export PATH="$DOTNET_ROOT:$PATH"
+
+            export EDITOR=nvim
+	    export SHELL=fish
+
+            case "$(uname)" in
+                Darwin*)
+                  ;;
+                *)
+                  # Linux (and everything else): keep Git‑Credential‑Manager
+                  export GCM_CREDENTIAL_STORE=secretservice
+                  ;;
+              esac
+              git config --global credential.helper \
+                  "/nix/store/qj13v9wpp87gd5rivhah0mx8gdgdipkx-git-credential-manager-2.7.3/bin/git-credential-manager"
+
+            zellij
+
+DOTNET_ROOT_X64=/nix/store/aak1iap8614xdal2qvzfna60q6slj0w7-dotnetSdks/share/dotnet
+TEMP=/tmp/nix-shell.z11nYI
+OBJCOPY=objcopy
+NIX_HARDENING_ENABLE=bindnow format fortify fortify3 libcxxhardeningfast pic relro stackclashprotection stackprotector strictflexarrays1 strictoverflow zerocallusedregs
+WAYLAND_DISPLAY=wayland-1
+TERM=xterm-ghostty
+EDITOR=nvim
+PWD=/var/home/pni/dotfiles/nix
+IN_NIX_SHELL=impure
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/nix-shell.z11nYI/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/nix-shell.z11nYI/9b6c4f27aa9d802833d0c3ca'... OK
+Reading from temporary file '/tmp/nix-shell.z11nYI/9b6c4f27aa9d802833d0c3ca'... OK
+Deleting temporary file '/tmp/nix-shell.z11nYI/9b6c4f27aa9d802833d0c3ca'... OK
+Testing IFileSystem instance...
+UserHomePath: /var/home/pni
+UserDataDirectoryPath: /var/home/pni/.gcm
+GetCurrentDirectory(): /var/home/pni/dotfiles/nix
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:36931/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.53.0'
+Locating current repository...Git repository at '/var/home/pni/dotfiles/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:/var/home/pni/.gitconfig	credential.usehttppath=true
+file:/var/home/pni/.gitconfig	credential.helper=/nix/store/v9p6gizsmfgljg8vy3055zm5dnsl4fhw-git-credential-manager-2.7.3/bin/git-credential-manager
+file:/var/home/pni/.gitconfig	user.name=Philip Tofte Nielsen
+file:/var/home/pni/.gitconfig	user.email=pni@cvation.com
+file:/var/home/pni/.gitconfig	includeif.gitdir:~/dev/SimCorp/**.path=~/dotfiles/git/simcorp.gitconfig
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/philipwastakenwastaken/dotfiles-.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /var/home/pni/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /var/home/pni/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

@@ -2,10 +2,10 @@ return {
 	{
 		"saghen/blink.cmp",
 		-- Optional: provides snippets for the snippet source
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "rafamadriz/friendly-snippets", "saghen/blink.lib" },
 		-- version = '1.*', -- use a release tag to download pre-built binaries
 		-- Uncomment and adjust if you need to build from source:
-		build = "cargo build --release",
+		build = function() require("blink.cmp").build():pwait() end,
 		opts = {
 			-- Choose a preset for key mappings: 'default', 'super-tab', 'enter', or 'none'
 			keymap = { preset = "default" },

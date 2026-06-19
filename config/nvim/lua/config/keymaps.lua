@@ -31,6 +31,10 @@ end, { noremap = true, silent = true, desc = "Jump to previous diagnostic" })
 
 vim.keymap.set("n", "<leader>y", "<cmd>Yazi<CR>", { desc = "Yazi" })
 
+vim.keymap.set("n", "<leader>ww", function()
+	vim.wo.wrap = not vim.wo.wrap
+end, { desc = "Toggle word wrap" })
+
 vim.keymap.set("n", "<leader>dp", "d/\\u<CR>", { desc = "Delete until first uppercase" })
 vim.keymap.set("n", "<leader>cp", "c/\\u<CR>", { desc = "Change until first uppercase" })
 

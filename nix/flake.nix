@@ -209,6 +209,7 @@
 
             case "$(uname)" in
                 Darwin*)
+                  export GCM_CREDENTIAL_STORE=keychain
                   ;;
                 *)
                   # Linux (and everything else): keep Git‑Credential‑Manager

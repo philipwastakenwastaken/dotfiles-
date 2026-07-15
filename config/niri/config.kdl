@@ -8,6 +8,8 @@ hotkey-overlay {
     skip-at-startup
 }
 
+spawn-at-startup "sh" "-c" "mkdir -p \"${XDG_CACHE_HOME:-$HOME/.cache}/niri\" && magick /usr/share/backgrounds/bluefin/07-bluefin-day.jxl \"${XDG_CACHE_HOME:-$HOME/.cache}/niri/background.png\" && exec swaybg -i \"${XDG_CACHE_HOME:-$HOME/.cache}/niri/background.png\" -m fill"
+
 cursor {
     hide-after-inactive-ms 3000
 }

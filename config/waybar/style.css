@@ -1,7 +1,6 @@
 * {
   border: none;
   border-radius: 0;
-  /* `otf-font-awesome` is required to be installed for icons */
   font-family:
     Source Code Pro,
     sans-serif;
@@ -49,6 +48,11 @@ window#waybar.hidden {
 #mode {
   background-color: #64727d;
   border-top: 3px solid #ffffff;
+}
+
+#idle_inhibitor {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
 }
 
 #window {

@@ -124,6 +124,8 @@
                 # vscode
                 pkgs.vscode
 
+                pkgs.yarn
+
                 # dotnet
                 self.packages.${system}.dotnetSdks
                 self.packages.${system}.lazytest

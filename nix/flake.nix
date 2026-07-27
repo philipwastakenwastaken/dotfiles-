@@ -180,6 +180,9 @@
               ];
 
               linuxOnly = pkgs.lib.optionals pkgs.stdenv.isLinux [
+                # ASP.NET Core dev-certs browser trust
+                pkgs.nssTools
+
                 # Niri
                 pkgs.xwayland-satellite
                 pkgs.waybar-mpris
@@ -205,6 +208,13 @@
             export DOTNET_ROOT="${self.packages.${system}.dotnetSdks}/share/dotnet"
             export DOTNET_ROOT_X64="$DOTNET_ROOT"
             export PATH="$DOTNET_ROOT:$PATH"
+            unset SSL_CERT_DIR
+            export NIX_SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+            export SSL_CERT_FILE="$NIX_SSL_CERT_FILE"
+            if compgen -G "$HOME/.aspnet/dev-certs/trust/*.pem" > /dev/null; then
+              export SSL_CERT_FILE="$HOME/.aspnet/dev-certs/trust/ca-bundle-with-aspnet-dev-certs.crt"
+              cat "$NIX_SSL_CERT_FILE" "$HOME"/.aspnet/dev-certs/trust/*.pem > "$SSL_CERT_FILE"
+            fi
 
             export EDITOR=nvim
 	    export SHELL=fish

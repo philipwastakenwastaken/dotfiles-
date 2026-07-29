@@ -13,3 +13,6 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.hlsearch = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true

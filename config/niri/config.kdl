@@ -9,6 +9,7 @@ hotkey-overlay {
 }
 
 spawn-at-startup "sh" "-c" "exec swaybg -i \"$HOME/bg.jpg\" -m fill"
+spawn-at-startup "sh" "-c" "exec gnome-keyring-daemon --replace --daemonize --components=secrets"
 
 cursor {
     hide-after-inactive-ms 3000
@@ -106,7 +107,7 @@ workspace "communication" {
 }
 
 binds {
-    Mod+T { spawn "ghostty" "-e" "nix" "develop" "/var/home/pni/dotfiles/nix"; }
+    Mod+T { spawn "env" "GTK_IM_MODULE=simple" "ghostty" "-e" "nix" "develop" "/var/home/pni/dotfiles/nix"; }
     Mod+D { spawn "fuzzel"; }
     Mod+L { spawn "swaylock"; }
 

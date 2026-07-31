@@ -126,6 +126,8 @@
 
                 pkgs.yarn
 
+                pkgs.bottom
+
                 # dotnet
                 self.packages.${system}.dotnetSdks
                 self.packages.${system}.lazytest
@@ -223,10 +225,10 @@
                 Darwin*)
                   ;;
                 *)
-                  # Linux (and everything else): keep Git‑Credential‑Manager
                   export GCM_CREDENTIAL_STORE=secretservice
                   # Use device code flow instead of browser OAuth to avoid callback issues
                   export GCM_MSAUTH_FLOW=devicecode
+                  git config --global credential.credentialStore secretservice
                   ;;
               esac
               git config --global credential.helper \

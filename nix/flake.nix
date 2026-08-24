@@ -56,6 +56,11 @@
           # Use the toolchain component instead of the cargo-built nightly package.
           fenix.packages.${system}.complete.rust-analyzer;
 
+        azureCli = pkgs.azure-cli.withExtensions [
+          pkgs.azure-cli-extensions.log-analytics
+          pkgs.azure-cli-extensions.application-insights
+        ];
+
         bicep-langserver = pkgs.stdenv.mkDerivation rec {
           pname = "bicep-langserver";
           version = "0.42.1";
@@ -137,7 +142,7 @@
                 pkgs.redis
 
                 # azure
-                pkgs.azure-cli
+                azureCli
                 pkgs.powershell
                 pkgs.azure-storage-azcopy
                 bicep-langserver
@@ -226,8 +231,6 @@
                   ;;
                 *)
                   export GCM_CREDENTIAL_STORE=secretservice
-                  # Use device code flow instead of browser OAuth to avoid callback issues
-                  export GCM_MSAUTH_FLOW=devicecode
                   git config --global credential.credentialStore secretservice
                   ;;
               esac

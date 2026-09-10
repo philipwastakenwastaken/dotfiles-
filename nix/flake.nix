@@ -7,12 +7,6 @@
     flake-utils.url      = "github:numtide/flake-utils";
     neovim.url           = "github:nix-community/neovim-nightly-overlay";
     fenix.url            = "github:nix-community/fenix";
-    lazytest = {
-      url = "github:philipwastakenwastaken/lazytest";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.fenix.follows = "fenix";
-    };
-
     azure-pipelines = {
       url = "github:sofusa/azure-pipelines-language-server-nix";
       inputs.nixpkgs.follows = "nixpkgs-stable";
@@ -25,7 +19,6 @@
     nixpkgs-stable,
     flake-utils,
     fenix,
-    lazytest,
     azure-pipelines,
     neovim
   }:
@@ -61,30 +54,91 @@
           pkgs.azure-cli-extensions.application-insights
         ];
 
-        bicep-langserver = pkgs.stdenv.mkDerivation rec {
-          pname = "bicep-langserver";
-          version = "0.42.1";
+        bicepVersion = "0.47.16";
+        bicepCliAsset = {
+          x86_64-linux = {
+            name = "bicep-linux-x64";
+            hash = "sha256-ZMNFpY4MPkixvJik5i1rOtsdI4KBKX3jQArq+yaXqlo=";
+          };
+          aarch64-linux = {
+            name = "bicep-linux-arm64";
+            hash = "sha256-RAYhTMJ0z6x8ghVSrsIXi4CuxjfZHtiyRCgpZMHPJOM=";
+          };
+          x86_64-darwin = {
+            name = "bicep-osx-x64";
+            hash = "sha256-i6V3G1JhQT2IWDgp8uokUJ62WwbYmWIMFyg+y2DVynM=";
+          };
+          aarch64-darwin = {
+            name = "bicep-osx-arm64";
+            hash = "sha256-aARqCEyIUDz2vRHazyocT/y346ycazENKV4CSvIbvqQ=";
+          };
+        }.${system};
 
-          src = pkgs.fetchzip {
-            url = "https://github.com/Azure/bicep/releases/download/v${version}/bicep-langserver.zip";
-            sha256 = "1fmxjy25x9zh39z5983sm0bgssk1p7gljwprshjnr8lxqg5pam6k";
-            stripRoot = false;
+        bicep-cli-unwrapped = pkgs.stdenvNoCC.mkDerivation {
+          pname = "bicep-cli";
+          version = bicepVersion;
+
+          src = pkgs.fetchurl {
+            url = "https://github.com/Azure/bicep/releases/download/v${bicepVersion}/${bicepCliAsset.name}";
+            hash = bicepCliAsset.hash;
           };
 
+          dontUnpack = true;
           installPhase = ''
-            mkdir -p $out/bin
-            cp -r $src $out/bin/Bicep.LangServer/
-
-            cat <<EOF > $out/bin/bicep-langserver
-            #!/usr/bin/env bash
-            exec dotnet $out/bin/Bicep.LangServer/Bicep.LangServer.dll "\$@"
-            EOF
-
-            chmod +x $out/bin/bicep-langserver
+            install -Dm755 $src $out/bin/bicep
           '';
+        };
+
+        bicep-cli =
+          if pkgs.stdenv.hostPlatform.isLinux
+          then pkgs.buildFHSEnv {
+            name = "bicep";
+            targetPkgs = pkgs: [
+              pkgs.icu
+              pkgs.openssl
+              pkgs.stdenv.cc.cc.lib
+              pkgs.zlib
+            ];
+            runScript = "${bicep-cli-unwrapped}/bin/bicep";
+          }
+          else bicep-cli-unwrapped;
+
+        bicep-langserver = pkgs.stdenv.mkDerivation rec {
+          pname = "bicep-langserver";
+          version = bicepVersion;
+
+          src = pkgs.fetchurl {
+            url = "https://github.com/Azure/bicep/releases/download/v${version}/bicep-langserver.zip";
+            hash = "sha256-Ep0+N6pmjcsaSY7kBSi6WfU1JYodOrDODfKCVodGvoA=";
+          };
+
+          dontUnpack = true;
+          nativeBuildInputs = [
+            pkgs.makeWrapper
+            pkgs.unzip
+          ];
+
+          installPhase = ''
+            mkdir -p $out/lib/bicep-langserver
+            unzip $src -d $out/lib/bicep-langserver
+            makeWrapper \
+              ${pkgs.dotnetCorePackages.runtime_10_0}/bin/dotnet \
+              $out/bin/bicep-langserver \
+              --add-flags "$out/lib/bicep-langserver/Bicep.LangServer.dll"
+          '';
+        };
+
+        bicep = pkgs.symlinkJoin {
+          name = "bicep-${bicepVersion}";
+          paths = [
+            bicep-cli
+            bicep-langserver
+          ];
         };
       in
       {
+        packages.bicep = bicep;
+
         packages.dotnetSdks =
           # combinePackages uses symlinkJoin, so the SDK directories (e.g.
           # share/dotnet/sdk/10.0.202) are symlinks back to each per-SDK store.
@@ -108,8 +162,6 @@
             cp -RL ${combined}/. $out/
             chmod -R u+w $out
           '';
-
-        packages.lazytest = lazytest.packages.${system}.default;
 
         devShells.default = pkgs.mkShell {
           buildInputs =
@@ -135,7 +187,6 @@
 
                 # dotnet
                 self.packages.${system}.dotnetSdks
-                self.packages.${system}.lazytest
                 pkgs-stable.csharpier
                 pkgs.azure-functions-core-tools
 
@@ -145,7 +196,7 @@
                 azureCli
                 pkgs.powershell
                 pkgs.azure-storage-azcopy
-                bicep-langserver
+                bicep
                 azure-pipelines.packages.${system}.azure-pipelines-language-server
                 pkgs.azurite
 
@@ -186,7 +237,7 @@
                 pkgs.playwright-driver.browsers
               ];
 
-              linuxOnly = pkgs.lib.optionals pkgs.stdenv.isLinux [
+              linuxOnly = pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
                 # ASP.NET Core dev-certs browser trust
                 pkgs.nssTools
 
@@ -195,7 +246,7 @@
                 pkgs.waybar-mpris
               ];
 
-              darwinOnly = pkgs.lib.optionals pkgs.stdenv.isDarwin [
+              darwinOnly = pkgs.lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
                 # macOS‑specific packages go here (currently none)
               ];
             in
@@ -211,6 +262,8 @@
 
             export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
             export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true;
+
+            export AZURE_BICEP_USE_BINARY_FROM_PATH=true
 
             export DOTNET_ROOT="${self.packages.${system}.dotnetSdks}/share/dotnet"
             export DOTNET_ROOT_X64="$DOTNET_ROOT"

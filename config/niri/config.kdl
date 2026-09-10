@@ -42,7 +42,15 @@ input {
     }
 }
 
-// Main
+// Home
+output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW" {
+    mode "3840x2160@120.000"
+    position x=0 y=0
+    scale 1.5
+    transform "normal"
+}
+
+// Office main
 output "DP-2" {
     mode "2560x1440@74.780"
     position x=0 y=0      
@@ -50,7 +58,7 @@ output "DP-2" {
     transform "normal"
 }
 
-// Left
+// Office left
 output "DP-4" {
     mode "2560x1440@74.780"
     position x=-2560 y=0      
@@ -58,10 +66,9 @@ output "DP-4" {
     transform "normal"
 }
 
-// Right
+// Laptop: positioned automatically to the right of the connected setup.
 output "eDP-1" {
     mode "2560x1600@165.004"
-    position x=2560 y=0    
     scale 1.5
     transform "normal"
 }

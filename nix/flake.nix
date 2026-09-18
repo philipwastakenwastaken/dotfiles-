@@ -135,6 +135,36 @@
             bicep-langserver
           ];
         };
+
+        playwrightBrowsers =
+          let
+            driver = pkgs.playwright-driver;
+            components = driver.components // {
+              webkit =
+                if pkgs.stdenv.hostPlatform.isLinux
+                then driver.components.webkit.overrideAttrs (previousAttrs: {
+                  buildInputs = (previousAttrs.buildInputs or [ ]) ++ [
+                    pkgs.libmanette
+                  ];
+                })
+                else driver.components.webkit;
+            };
+            browserNames = [
+              "chromium"
+              "chromium-headless-shell"
+              "firefox"
+              "webkit"
+              "ffmpeg"
+            ];
+          in
+          pkgs.linkFarm "playwright-browsers" (
+            map
+              (name: {
+                name = "${pkgs.lib.replaceStrings [ "-" ] [ "_" ] name}-${driver.browsersJSON.${name}.revision}";
+                path = components.${name};
+              })
+              browserNames
+          );
       in
       {
         packages.bicep = bicep;
@@ -234,7 +264,7 @@
                 pkgs.chromedriver
 
                 # Playwright
-                pkgs.playwright-driver.browsers
+                playwrightBrowsers
               ];
 
               linuxOnly = pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
@@ -260,7 +290,7 @@
               pkgs.zlib
             ]}:$LD_LIBRARY_PATH"
 
-            export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
+            export PLAYWRIGHT_BROWSERS_PATH="${playwrightBrowsers}"
             export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true;
 
             export AZURE_BICEP_USE_BINARY_FROM_PATH=true

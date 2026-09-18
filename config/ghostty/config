@@ -6,3 +6,6 @@ copy-on-select = clipboard
 # Make Shift+Insert paste from the system clipboard (default pastes PRIMARY),
 # so Ctrl+V and Shift+Insert always produce the same thing.
 keybind = shift+insert=paste_from_clipboard
+
+# Avoid multiplying each physical mouse-wheel step.
+mouse-scroll-multiplier = precision:1,discrete:0.5

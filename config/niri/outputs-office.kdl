@@ -1,0 +1,40 @@
+// Office main
+output "Lenovo Group Limited P27h-30 V30CZ32A" {
+    focus-at-startup
+    mode "2560x1440@74.780"
+    position x=0 y=0
+    scale 1
+    transform "normal"
+}
+
+// Office left
+output "Lenovo Group Limited P27h-30 V30CZ326" {
+    mode "2560x1440@74.780"
+    position x=-2560 y=0
+    scale 1
+    transform "normal"
+}
+
+// Laptop right
+output "eDP-1" {
+    mode "2560x1600@165.004"
+    position x=2560 y=0
+    scale 1.5
+    transform "normal"
+}
+
+workspace "browser" {
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
+}
+
+workspace "code" {
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
+}
+
+workspace "music" {
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
+}
+
+workspace "communication" {
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
+}

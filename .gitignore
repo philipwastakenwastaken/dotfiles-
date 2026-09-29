@@ -1,2 +1,3 @@
 config.kdl.*
 .DS_Store
+config/niri/outputs.kdl

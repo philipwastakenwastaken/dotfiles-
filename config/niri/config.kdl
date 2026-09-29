@@ -46,37 +46,9 @@ input {
     }
 }
 
-// Home
-output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW" {
-    mode "3840x2160@120.000"
-    position x=0 y=0
-    scale 1.5
-    transform "normal"
-}
-
-// Office main
-output "Lenovo Group Limited P27h-30 V30CZ32A" {
-    mode "2560x1440@74.780"
-    position x=0 y=0
-    scale 1
-    transform "normal"
-}
-
-// Office left
-output "Lenovo Group Limited P27h-30 V30CZ326" {
-    mode "2560x1440@74.780"
-    position x=-2560 y=0
-    scale 1
-    transform "normal"
-}
-
-// Laptop right
-output "eDP-1" {
-    mode "2560x1600@165.004"
-    position x=2560 y=0
-    scale 1.5
-    transform "normal"
-}
+// Monitor layout: outputs.kdl is a symlink to outputs-home.kdl or outputs-office.kdl.
+// Switch with ./switch-location.sh [home|office] or Ctrl+F12.
+include "outputs.kdl"
 
 layout {
     shadow {
@@ -102,26 +74,11 @@ layout {
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-workspace "browser" {
-    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
-}
-
-workspace "code" {
-    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
-}
-
-workspace "music" {
-    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
-}
-
-workspace "communication" {
-    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
-}
-
 binds {
     Mod+T { spawn "env" "GTK_IM_MODULE=simple" "ghostty" "-e" "nix" "develop" "/var/home/pni/dotfiles/nix"; }
     Mod+D { spawn "fuzzel"; }
     Mod+L { spawn "swaylock"; }
+    Ctrl+F12 { spawn "sh" "-c" "~/.config/niri/switch-location.sh"; }
 
     Mod+Backspace { close-window; }
 

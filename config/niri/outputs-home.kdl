@@ -1,0 +1,40 @@
+// Home left
+output "Dell Inc. DELL S2725QS 2WYM364" {
+    mode "3840x2160@120.000"
+    position x=-2560 y=0
+    scale 1.5
+    transform "normal"
+}
+
+// Home main
+output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW" {
+    focus-at-startup
+    mode "3840x2160@120.000"
+    position x=0 y=0
+    scale 1.5
+    transform "normal"
+}
+
+// Laptop below main, horizontally centered
+output "eDP-1" {
+    mode "2560x1600@165.004"
+    position x=427 y=1440
+    scale 1.5
+    transform "normal"
+}
+
+workspace "browser" {
+    open-on-output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW"
+}
+
+workspace "code" {
+    open-on-output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW"
+}
+
+workspace "music" {
+    open-on-output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW"
+}
+
+workspace "communication" {
+    open-on-output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW"
+}

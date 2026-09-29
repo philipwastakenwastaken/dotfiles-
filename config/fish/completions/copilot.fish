@@ -64,13 +64,14 @@ complete -c copilot -n "__fish_copilot_needs_command" -l context -d 'Set the con
 long_context\t''"
 complete -c copilot -n "__fish_copilot_needs_command" -l auto-tier -d 'Set the Auto routing profile' -r -f -a "efficiency\t''
 balance\t''
-intelligence\t''"
+intelligence\t''
+fast\t''"
 complete -c copilot -n "__fish_copilot_needs_command" -l agent -d 'Specify a custom agent to use' -r
 complete -c copilot -n "__fish_copilot_needs_command" -s r -l resume -d 'Resume from a previous session (optionally specify existing session ID, task ID, ID prefix, or name; name matching is exact, case-insensitive)' -r
 complete -c copilot -n "__fish_copilot_needs_command" -s n -l name -d 'Set a name for the new session' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l session-id -d 'Resume an existing session or task by ID, or set the UUID for a new session' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l connect -d 'Connect directly to a remote session (optionally specify session ID or task ID)' -r
-complete -c copilot -n "__fish_copilot_needs_command" -s w -l worktree -d 'Create or reuse an isolated git worktree under <repo>.worktrees/ and start the session inside it (name is optional)' -r
+complete -c copilot -n "__fish_copilot_needs_command" -s w -l worktree -d 'Create or reuse an isolated git worktree and start the session inside it (name is optional; the location follows the worktreePathTemplate setting)' -r
 complete -c copilot -n "__fish_copilot_needs_command" -s C -d 'Change working directory before doing anything else' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l log-dir -d 'Set log file directory (default: ~/.copilot/logs/)' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l extension-sdk-path -d 'Override the bundled @github/copilot-sdk injected into extension subprocesses with a local `copilot-sdk/` folder. Invalid paths fall back to the bundled SDK.' -r
@@ -315,7 +316,7 @@ complete -c copilot -n "__fish_copilot_using_subcommand completion" -s h -l help
 complete -c copilot -l model -r -f -a 'auto claude-sonnet-5 claude-fable-5.1 claude-fable-5 claude-opus-5 claude-opus-4.8 claude-opus-4.8-fast claude-opus-4.7 claude-sonnet-4.6 claude-haiku-4.5 gpt-6-astra gpt-5.6-sol gpt-5.6-terra gpt-5.6-luna gpt-5.5 gpt-5.4 gpt-5.4-mini gpt-5.3-codex gpt-5-mini mai-code-1.1-flash gemini-3.8-flash gemini-3.7-flash gemini-3.6-flash gemini-3.5-flash grok-4.5 kimi-k3 kimi-k2.7-code'
 complete -c copilot -l reasoning-effort -r -f -a 'none minimal low medium high xhigh max'
 complete -c copilot -l context -r -f -a 'default long_context'
-complete -c copilot -l auto-tier -r -f -a 'efficiency balance intelligence'
+complete -c copilot -l auto-tier -r -f -a 'efficiency balance intelligence fast'
 complete -c copilot -l log-level -r -f -a 'none error warning info debug all default'
 complete -c copilot -l stream -r -f -a 'on off'
 complete -c copilot -l output-format -r -f -a 'text json'

@@ -8,6 +8,10 @@ hotkey-overlay {
     skip-at-startup
 }
 
+debug {
+    render-drm-device "/dev/dri/renderD129"
+}
+
 spawn-at-startup "sh" "-c" "exec swaybg -i \"$HOME/bg.jpg\" -m fill"
 spawn-at-startup "sh" "-c" "exec gnome-keyring-daemon --replace --daemonize --components=secrets"
 
@@ -51,24 +55,25 @@ output "Lenovo Group Limited Pro 27UD-10 UGW1F3TW" {
 }
 
 // Office main
-output "DP-2" {
+output "Lenovo Group Limited P27h-30 V30CZ32A" {
     mode "2560x1440@74.780"
-    position x=0 y=0      
+    position x=0 y=0
     scale 1
     transform "normal"
 }
 
 // Office left
-output "DP-4" {
+output "Lenovo Group Limited P27h-30 V30CZ326" {
     mode "2560x1440@74.780"
-    position x=-2560 y=0      
+    position x=-2560 y=0
     scale 1
     transform "normal"
 }
 
-// Laptop: positioned automatically to the right of the connected setup.
+// Laptop right
 output "eDP-1" {
     mode "2560x1600@165.004"
+    position x=2560 y=0
     scale 1.5
     transform "normal"
 }
@@ -98,19 +103,19 @@ layout {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 workspace "browser" {
-    open-on-output "DP-2"
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
 }
 
 workspace "code" {
-    open-on-output "DP-2"
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
 }
 
 workspace "music" {
-    open-on-output "DP-2"
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
 }
 
 workspace "communication" {
-    open-on-output "DP-2"
+    open-on-output "Lenovo Group Limited P27h-30 V30CZ32A"
 }
 
 binds {
